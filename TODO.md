@@ -1,4 +1,10 @@
 
+* gpg keys on github are updated?
+
+* integrate sshagent and gpgagent a la nixos
+
+* update README.md
+
 * brightness not working
 ```
 #Screen brightness controls Thinkpad X1 Yoga
