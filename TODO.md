@@ -8,30 +8,30 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 25
 ```
 
 * organize configuration as modules
-https://nixos.wiki/wiki/NixOS:extend_NixOS
-https://nixos.wiki/wiki/Module#Function
+  - https://nixos.wiki/wiki/NixOS:extend_NixOS
+  - https://nixos.wiki/wiki/Module#Function
 
 * json nixpining vs nix pinning
-https://gist.github.com/zimbatm/de5350245874361762b6a4dfe5366530
+  - https://gist.github.com/zimbatm/de5350245874361762b6a4dfe5366530
 
 * gitcrypt instead of sops? specially for declarative userpass?
-https://github.com/tomberek/nixos.files/blob/master/.gitattributes
-https://github.com/tomberek/nixos.files/blob/master/environment.nix#L99
+  - https://github.com/tomberek/nixos.files/blob/master/.gitattributes
+  - https://github.com/tomberek/nixos.files/blob/master/environment.nix#L99
 
 * nix standard project structure
-https://www.reddit.com/r/NixOS/comments/8tkllx/standard_project_structure/
+  - https://www.reddit.com/r/NixOS/comments/8tkllx/standard_project_structure/
 
 * nixos without using channels (and nixpath)
-```
-https://github.com/anderspapitto/nixos-configuration/
-https://github.com/anderspapitto/nixos-configuration/blob/master/nix.nix#L12
-https://www.reddit.com/r/NixOS/comments/7p83y4/install_a_package_from_unstable_while_running/
-https://nixos.wiki/wiki/How_to_fetch_Nixpkgs_with_an_empty_NIX_PATH
-https://github.com/NixOS/nixpkgs/issues/27994
-https://www.reddit.com/r/NixOS/comments/deorkq/pinning_nixpkgs_by_sha/
-https://github.com/colemickens/nixcfg
-https://news.ycombinator.com/item?id=20486462
+  - https://github.com/anderspapitto/nixos-configuration/
+  - https://github.com/anderspapitto/nixos-configuration/blob/master/nix.nix#L12
+  - https://www.reddit.com/r/NixOS/comments/7p83y4/install_a_package_from_unstable_while_running/
+  - https://nixos.wiki/wiki/How_to_fetch_Nixpkgs_with_an_empty_NIX_PATH
+  - https://github.com/NixOS/nixpkgs/issues/27994
+  - https://www.reddit.com/r/NixOS/comments/deorkq/pinning_nixpkgs_by_sha/
+  - https://github.com/colemickens/nixcfg
+  - https://news.ycombinator.com/item?id=20486462
 
+```
 ralvarez@auto  ~/conf  rg "<nix" .
 ./os/hardware/x1c6.nix
 8:    [ <nixpkgs/nixos/modules/installer/scan/not-detected.nix>
@@ -56,20 +56,20 @@ nixos https://nixos.org/channels/nixos-unstable
 * notify via dunst where backup is not possible to run because of ggpagent is not open
 
 * should be integrated home and os config?
-is there a way to run home-mananger switch using nixos-rebuild
+   is there a way to run home-mananger switch using nixos-rebuild
 
 * what is the max temperature?
-Jan 02 11:02:26 auto kernel: CPU2: Package temperature above threshold, cpu clock throttled
+   Jan 02 11:02:26 auto kernel: CPU2: Package temperature above threshold, cpu clock throttled
 
 * wasabi backup in append-only-mode with no prune operations
-migrate from restic?
+   migrate from restic?
 
 * organize per profile configuration
-https://github.com/dnixty/home-config/blob/0eaf92623f3044b9c61114b0a1a012c4d74ec5ae/modules/profiles/gpg.nix
-https://github.com/dnixty/nixos-config
+  - https://github.com/dnixty/home-config/blob/0eaf92623f3044b9c61114b0a1a012c4d74ec5ae/modules/profiles/gpg.nix
+  - https://github.com/dnixty/nixos-config
 
 * chromium with wrapper in incognito mode, allows remove brave and firefox
-https://github.com/floscr/dotfiles-nix/blob/db7c6553736dbce0d74ca763cd1a5e2e9f4bf075/modules/browser/chromium.nix
+  - https://github.com/floscr/dotfiles-nix/blob/db7c6553736dbce0d74ca763cd1a5e2e9f4bf075/modules/browser/chromium.nix
 
 * move to wayland and swaywm
 https://swaywm.org/
