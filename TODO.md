@@ -123,25 +123,31 @@ https://github.com/aaronjanse/dotfiles
 * generate vm from config to diff format
 https://github.com/nix-community/nixos-generators
 
-initialHassedPasswords with externalized secrets.nix
+* initialHassedPasswords with externalized secrets.nix
 https://github.com/sylvblck/nixos-config/blob/f85d5a9a6ce3989a3453cd66f6f91c0a0a03c90a/users/sylv.nix
 https://github.com/mfiano/nixos-config/blob/909a4253a16becaad7cc1c50af7d0aca04e58178/cfg/users.nix
 
 * auto-saves emacs
 Auto-saving biva.txt: Opening output file: No such file or directory, /home/ralvarez/.emacs.d/auto-saves/#
+
 * EDITOR=emacs
+
 * emacs as a user service in home-manager
+
 * emacs via nix home-manager
 https://github.com/BrianHicks/dotfiles.nix/blob/master/dotfiles/emacs.nix
+
 * mkdir /home/ralvarez/.emacs.d/auto-saves (nixify)
 
-* pasar a home-manager install as user by code
+* move to home-manager install as user by code
 https://github.com/bobvanderlinden/nix-home/blob/master/home.nix
 
 * i3 and git config nixifie
 
 * xscreenlayout nixfied
+
 * several DPI according to monitors (autorandr)
+
 * split xwindows conf from home-manager
 https://rycee.net/posts/2017-07-02-manage-your-home-with-nix.html
 
@@ -168,15 +174,15 @@ https://github.com/dejanr/dotfiles/blob/34d40e4d59853f11f3190b2a95589f0e59175294
 * ideal conf structure
 https://github.com/dejanr/dotfiles/blob/34d40e4d59853f11f3190b2a95589f0e59175294/nix/config/nixpkgs/machines/theory/hardware-configuration.nix
 
-triggerhappy, alternativa a los problemas de actkbd por usuario root lanzando la solicitud
+* triggerhappy, alternativa a los problemas de actkbd por usuario root lanzando la solicitud
 https://github.com/xantoz/nixconfig/blob/64c1fa55e065f31aa9c02c3a05e0124a304008cf/machines/nazrin/configuration.nix
 
-tmpontmpfs y cleanTmpDir y sysctl
+* tmpontmpfs y cleanTmpDir y sysctl
 https://github.com/kpango/dotfiles/blob/d8453fe3b3a530292974ca0edd6677066efa4275/nix/boot.nix
 
-usbguard
+* usbguard
 https://github.com/lesnuages/dotfiles/blob/70d7174f3b786c49c36ace890f51b2cca328d2e1/configuration.nix
 
-workflow test same OS conf via iso with qemu
+* workflow test same OS conf via iso with qemu
 
-prelude vs spacemacs
+* prelude vs spacemacs
