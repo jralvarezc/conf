@@ -1,6 +1,4 @@
 
-* stopre conf to git
-
 * brightness not working
 #Screen brightness controls Thinkpad X1 Yoga
 # sudo apt-get install xbacklight
