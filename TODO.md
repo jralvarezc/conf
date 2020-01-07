@@ -1,9 +1,11 @@
 
 * brightness not working
+```
 #Screen brightness controls Thinkpad X1 Yoga
 # sudo apt-get install xbacklight
 bindsym XF86MonBrightnessUp exec xbacklight -inc 25
 bindsym XF86MonBrightnessDown exec xbacklight -dec 25
+```
 
 * organize configuration as modules
 https://nixos.wiki/wiki/NixOS:extend_NixOS
@@ -20,7 +22,7 @@ https://github.com/tomberek/nixos.files/blob/master/environment.nix#L99
 https://www.reddit.com/r/NixOS/comments/8tkllx/standard_project_structure/
 
 * nixos without using channels (and nixpath)
-*************************
+```
 https://github.com/anderspapitto/nixos-configuration/
 https://github.com/anderspapitto/nixos-configuration/blob/master/nix.nix#L12
 https://www.reddit.com/r/NixOS/comments/7p83y4/install_a_package_from_unstable_while_running/
@@ -49,7 +51,7 @@ home-manager https://github.com/rycee/home-manager/archive/master.tar.gz
 nixos https://nixos.org/channels/nixos-unstable
  ralvarez@auto  ~/conf  echo $NIX_PATH
 /home/ralvarez/.nix-defexpr/channels:nixpkgs=/nix/var/nix/profiles/per-user/root/channels/nixos:nixos-config=/etc/nixos/configuration.nix:/nix/var/nix/profiles/per-user/root/channels
-***********************************
+```
 
 * notify via dunst where backup is not possible to run because of ggpagent is not open
 
