@@ -24,3 +24,5 @@ $ sudo nixos-rebuild switch --upgrade --keep-going
 1. Reproducible setup (pinned versions, one build step -repo and gpg keys-)
 
 1. Separation of concerns (nixos-modules to avoid coupling -TODO-)
+
+1. Secure defaults (rm -i, vpn per default, encrypted disk and swap, autolock, etc)
