@@ -72,3 +72,10 @@ frecuent and automatic dedup write-only backup)
 9. Separation of concerns (one functionality needs multiple touch points)
    - currently: just os and home manager separation
    - future nixos modules to avoid coupling
+
+10. Keyboard centric
+
+## Contradictions
+
+1. Emacs vs Vi regarding requirement of minimal attack surface (less apps,
+simpler apps)
