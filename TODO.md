@@ -1,4 +1,6 @@
 
+* git commit editor with emacs
+
 * gpg keys on github are updated?
 
 * integrate sshagent and gpgagent a la nixos
