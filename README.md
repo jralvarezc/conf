@@ -79,3 +79,5 @@ frecuent and automatic dedup write-only backup)
 
 1. Emacs vs Vi regarding requirement of minimal attack surface (less apps,
 simpler apps)
+
+1. Monorepo for conf and blog will be a simpler configuration
