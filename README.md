@@ -4,12 +4,13 @@
 
 1. Clone this repo
 
-1. Relocate main config files to allow simple editing as non-admin user (wheel group)
+2. Relocate main config files to allow simple editing as non-admin
+user (wheel group)
 ```
 $ ./setup.sh
 ```
 
-1. Change configuration accordingly and rebuild whenever necesary:
+3. Change configuration accordingly and rebuild whenever necesary:
 ```
 $ home-manager switch
 $ sudo nixos-rebuild switch --upgrade --keep-going
@@ -17,12 +18,15 @@ $ sudo nixos-rebuild switch --upgrade --keep-going
 
 ## Requirements
 
-1. Secrets as code, always stored encrypted
+1. Open source by default (public code, auditable, community focused)
 
-1. Minimal configuration (less apps, less customization, simpler apps, less code)
+2. Minimal attack surface (less apps, simpler apps, minimal customization)
 
-1. Reproducible setup (pinned versions, one build step -repo and gpg keys-)
+3. Reproducible setup (pinned versions, one step build)
 
-1. Separation of concerns (nixos-modules to avoid coupling -TODO-)
+4. Safe defaults (rm -i, vpn, encrypted disk and swap, autolock,
+frecuent and automatic dedup backup)
 
-1. Secure defaults (rm -i, vpn per default, encrypted disk and swap, autolock, etc)
+5. Separation of concerns (nixos-modules to avoid coupling -TODO-)
+
+6. Secrets as code (versioned, encrypted at rest)
