@@ -36,10 +36,8 @@ in
     termite tmux # terminal
     xorg.xbacklight
     keybase kbfs keybase-gui # sequoia # pgp
-    _1password # pass tomb passExtensions.pass-tomb # password
-    tomb (pass.withExtensions (ext: [ext.pass-tomb]))
-    sops
-    chromium brave lynx links # browsers
+    _1password sops # password
+    chromium
     mullvad-vpn wireguard wireguard-tools # vpn
     netcat-gnu nmap
     bat ripgrep eva exa broot
