@@ -71,6 +71,11 @@ in
         word_wrap = true;
       };
 
+      shortcuts = {
+        close_all = "mod4+shift+a";
+        history = "mod4+shift+h";
+      };
+
       urgency_low = {
         background = "#00ff00"; # green
         timeout = 30;
