@@ -1,4 +1,10 @@
 
+* ssh-agent start nixified
+  - https://github.com/epage/nixos-config/blob/8fca7aab30e01ab92c8267eb17516bb123b222fe/profiles/security.nix
+  - https://github.com/meisternu/mynix/blob/544e76b01651c83d0c8ca81d684a81ffa0a1ea20/nixos/modules/programs/ssh.nix
+  - https://github.com/moredhel/nur-packages/blob/4a49021b91973cd4ee41127fe42de3f96f609069/home-manager/modules/crostini/core.nix
+  - https://github.com/moredhel/nur-packages/blob/4a49021b91973cd4ee41127fe42de3f96f609069/home-manager/modules/home/default.nix
+
 * git commit editor with emacs
 
 * gpg keys on github are updated?
