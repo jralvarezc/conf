@@ -5,7 +5,6 @@
     ./hardware/x1c6.nix
     ./services/vpn.nix
     ./services/hibernate.nix
-    ./services/cachix/conf.nix
     <home-manager/nixos>
   ];
 
