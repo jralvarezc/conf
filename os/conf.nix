@@ -80,7 +80,7 @@
     networkmanager.enable = true;
   };
 
-  services.dnscrypt-proxy.enable = true;
+  services.dnscrypt-proxy2.enable = true;
   services.mullvad.enable = true;
   services.ssmtp = {
     enable = true;
