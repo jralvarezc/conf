@@ -34,14 +34,13 @@
     device = "/dev/nvme0n1";
   };
 
-  boot.initrd.luks = {
-    devices = [ {
-      name = "root";
+  boot.initrd.luks.devices = {
+    root = {
       preLVM = true;
       keyFile = "/keyfile.bin"; # using second slot, avoiding passphrase again
       fallbackToPassword = true;
       device = "/dev/nvme0n1p1";
-    } ];
+    };
   };
 
   boot.extraModulePackages = [
