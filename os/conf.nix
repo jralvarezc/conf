@@ -126,7 +126,7 @@
     layout = "us";
     libinput.enable = true; # Enable touchpad
 
-    displayManager.auto = {
+    displayManager.lightdm.autoLogin = {
       enable = true; # avoiding third passphrase asked
       user = "ralvarez";
     };
