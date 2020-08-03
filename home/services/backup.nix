@@ -15,7 +15,7 @@ in
     Unit.PartOf = [ "backup.service" ];
     Timer.Unit = "backup.service";
     Timer.OnBootSec = "2h";
-    Timer.OnUnitInactiveSec = "2h";
+    Timer.OnUnitInactiveSec = "8h";
     Install.WantedBy = [ "timers.target" ];
   };
 
