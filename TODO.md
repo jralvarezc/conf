@@ -1,4 +1,22 @@
 
+* flake based config
+  https://github.com/johnae/world/tree/94b4c43758803c6b0279584e1858551a0a3435f1
+  https://github.com/johnae/nixos-configuration/blob/master/defaults/defaults.nix
+
+* remove home-manager and simplify config with nixos-modules
+
+* polybar
+  native process launch for custom vpn checks
+  or
+  i3status-rust i3status-rs
+
+* stubby dns
+  however mullvad includes a non logging dns server
+  when there is no vpn? killswitch?
+
+* prevent usb wakeup
+  https://github.com/johnae/nixos-configuration/blob/master/modules/services/disable-usb-wakeup.nix
+
 * ssh-agent start nixified
   - https://github.com/epage/nixos-config/blob/8fca7aab30e01ab92c8267eb17516bb123b222fe/profiles/security.nix
   - https://github.com/meisternu/mynix/blob/544e76b01651c83d0c8ca81d684a81ffa0a1ea20/nixos/modules/programs/ssh.nix
@@ -17,6 +35,11 @@
 # sudo apt-get install xbacklight
 bindsym XF86MonBrightnessUp exec xbacklight -inc 25
 bindsym XF86MonBrightnessDown exec xbacklight -dec 25
+
+working
+$ sudo tee /sys/class/backlight/intel_backlight/brightness <<< 300
+$ sudo tee /sys/class/backlight/intel_backlight/brightness <<< 1000
+
 ```
 
 * organize configuration as modules
@@ -89,7 +112,23 @@ nixos https://nixos.org/channels/nixos-unstable
 * how to create wrappers
   - https://github.com/leosbotelho/cartons/tree/17a800c848ffc493ca6cbdfd3917fb9fdc673eb1/pkgs/wrappers
 
-* protonvpn now has killswitch support for linux
+* protonvpn now has killswitch support for linux? yes, but it works? lets test it a little bit more
+  - and nixify configuration to fire it up on boot
+````
+ralvarez@auto  ~  sudo protonvpn s
+Status:       Connected
+Time:         0:12:27
+IP:           37.120.215.249
+Server:       US-FL#7
+Features:     Normal
+Protocol:     TCP
+Kill Switch:  Enabled
+Country:      United States
+City:         Miami
+Load:         47%
+Received:     23.3 MB
+Sent:         814.16 KB
+````
 
 * wrappers?
   - https://github.com/JorelAli/nixos/blob/c5bcfb6666be8ea0a2a17a9c50f5dc298c9b949d/overlays/wrappers/dunst.nix
