@@ -2,7 +2,6 @@
 
 let
   inherit (pkgs) callPackage;
-  rocketchat-desktop = callPackage ./packages/rocketchat/default.nix {};
   pgp-fp = "CED96DF463D7B86A1C4B1322BE6C92145BFF4A34";
 in
 {
@@ -17,7 +16,7 @@ in
 
   home.packages = with pkgs; [
     (import ./wrappers/restic-b2.nix)
-    rocketchat-desktop
+    teams # chat
     wget git bc zip unzip tree fzf # tools
     mkpasswd pwgen # crypto
     nox # nix
@@ -37,8 +36,7 @@ in
     xorg.xbacklight
     keybase kbfs keybase-gui # sequoia # pgp
     _1password sops # password
-    chromium
-    mullvad-vpn wireguard wireguard-tools # vpn
+    chromium brave firefox links lynx # browsers
     netcat-gnu nmap
     bat ripgrep eva exa broot
     pcre2 pcre most
