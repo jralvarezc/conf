@@ -16,7 +16,7 @@ $ home-manager switch
 $ sudo nixos-rebuild switch --upgrade --keep-going
 ```
 
-## Requirements
+## Goals
 
 1. Open source by default (public code, auditable, community focused)
    - currently: nix+git+github(this repo)
@@ -45,12 +45,13 @@ SUM:                            16            182             15            798
 3. Reproducible setup (pinned versions -TODO-, one step build)
    - currently: using nix-channels
    - future: remove NIX_PATH and versioned nixpkgs
+   - nixflakes?
 
 4. Safe defaults (rm -i, vpn, encrypted disk and swap, autolock,
 frecuent and automatic dedup write-only backup)
    - current backup: restic (dedup), tresorit (filesync with mobile)
    - current storage: backblaze (not write-only), will be solved with wasabi
-   - current vpn: mullvad (without killswitch), will be solved protonvpn2
+   - current vpn: mullvad (multihop with socks5 and killswitch), proton too slow
    - current browser: chromium+plugins, brave not working with plugins
 
 5. Secrets as code (versioned, encrypted at rest)
