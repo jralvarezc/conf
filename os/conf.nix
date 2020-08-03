@@ -3,8 +3,8 @@
 {
   imports = [
     ./hardware/x1c6.nix
-    ./services/vpn.nix
     ./services/hibernate.nix
+    ./modules/vpn.nix
     <home-manager/nixos>
   ];
 
@@ -15,6 +15,7 @@
   hardware.pulseaudio.support32Bit = true;
 
   system = {
+    # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
     stateVersion = "19.03";
     autoUpgrade.enable = false;
   };
@@ -29,7 +30,6 @@
     memtest86.enable = true;
     version = 2;
     enableCryptodisk = true; # first passphrase ask
-    extraInitrd = "/boot/initrd.keys.gz"; # decrypting second slot
     device = "/dev/nvme0n1";
   };
 
@@ -40,6 +40,10 @@
       fallbackToPassword = true;
       device = "/dev/nvme0n1p1";
     };
+  };
+
+  boot.initrd.secrets = {
+    "/keyfile.bin" = "/etc/secrets/initrd/keyfile.bin";
   };
 
   boot.extraModulePackages = [
@@ -80,8 +84,6 @@
     networkmanager.enable = true;
   };
 
-  services.dnscrypt-proxy2.enable = true;
-  services.mullvad.enable = true;
   services.ssmtp = {
     enable = true;
     hostName = "smtp.gmail.com:587";
@@ -111,12 +113,8 @@
     dunst libnotify
     font-manager powerline-fonts
     acpi
-#    cachix
   ];
 
-  services.printing.enable = true;
-  services.keybase.enable = true;
-  services.kbfs.enable = true;
   services.flatpak.enable = true;
   xdg.portal.enable = true;
 
@@ -125,7 +123,7 @@
     layout = "us";
     libinput.enable = true; # Enable touchpad
 
-    displayManager.lightdm.autoLogin = {
+    displayManager.autoLogin = {
       enable = true; # avoiding third passphrase asked
       user = "ralvarez";
     };
