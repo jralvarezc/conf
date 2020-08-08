@@ -12,7 +12,6 @@ $ ./setup.sh
 
 3. Change configuration accordingly and rebuild whenever necesary:
 ```
-$ home-manager switch
 $ sudo nixos-rebuild switch --upgrade --keep-going
 ```
 
@@ -25,25 +24,25 @@ $ sudo nixos-rebuild switch --upgrade --keep-going
    - currently: i3+termite+restic (800 LOC)
 ```
 $ nix-shell -p cloc --run "cloc conf"
-      25 text files.
-      25 unique files.
-      10 files ignored.
+      30 text files.
+      30 unique files.
+       7 files ignored.
 
-github.com/AlDanial/cloc v 1.84  T=0.01 s (1604.0 files/s, 99747.4 lines/s)
+github.com/AlDanial/cloc v 1.86  T=0.02 s (1575.5 files/s, 70767.2 lines/s)
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
-Nix                             12            106             15            600
-Markdown                         2             73              0            161
+Nix                             20            111             30            571
+Markdown                         2             91              0            239
 YAML                             1              1              0             30
-Bourne Shell                     1              2              0              7
+Bourne Shell                     1              1              0              4
 -------------------------------------------------------------------------------
-SUM:                            16            182             15            798
+SUM:                            24            204             30            844
 -------------------------------------------------------------------------------
 ```
 
 3. Reproducible setup (pinned versions -TODO-, one step build)
-   - currently: using nix-channels
+   - currently: using nix-channels (for nixos and nixpkgs) but pinned home-manager
    - future: remove NIX_PATH and versioned nixpkgs
    - nixflakes?
 
@@ -71,8 +70,8 @@ frecuent and automatic dedup write-only backup)
    - currently: grub password but not at login, long timeouts for gpg-agent
 
 9. Separation of concerns (one functionality needs multiple touch points)
-   - currently: just os and home manager separation
-   - future nixos modules to avoid coupling
+   - currently: basic concerns using simple inclusion
+   - future nixos modules with parameters and enable flags
 
 10. Keyboard centric
 
