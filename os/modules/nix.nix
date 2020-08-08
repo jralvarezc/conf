@@ -5,9 +5,9 @@
 
     # flake support
     package = pkgs.nixUnstable;
-    extraOptions = ''
-      experimental-features = nix-command flakes
-    '';
+#    extraOptions = ''
+#      experimental-features = nix-command flakes
+#    '';
 
     maxJobs = lib.mkDefault 8;
 
