@@ -1,5 +1,13 @@
 
+* native nix with sops
+  https://github.com/Mic92/sops-nix
+
+* reorganize based on modules
+  https://github.com/mogria/nixos-config (simple, no home manager, granular split)
+  https://github.com/taktoa/server-config
+
 * flake based config
+  https://github.com/davidtwco/veritas (best flake and home-manager monorepo) BEST
   https://github.com/johnae/world/tree/94b4c43758803c6b0279584e1858551a0a3435f1
   https://github.com/johnae/nixos-configuration/blob/master/defaults/defaults.nix
 
