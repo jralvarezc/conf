@@ -27,8 +27,4 @@
     "/keyfile.bin" = "/etc/secrets/initrd/keyfile.bin";
   };
 
-  boot.extraModulePackages = [
-    config.boot.kernelPackages.wireguard
-  ];
-
 }

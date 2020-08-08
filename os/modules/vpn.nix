@@ -10,6 +10,9 @@ with lib; {
   };
 
   config = mkIf config.modules.services.mullvad.enable {
+
+    boot.extraModulePackages = [ config.boot.kernelPackages.wireguard ];
+
     boot.kernelModules = [ "tun" ];
 
     # https://github.com/NixOS/nixpkgs/issues/91923
