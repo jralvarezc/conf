@@ -3,6 +3,7 @@
 {
   imports = [
     ./hardware/x1c6.nix
+    ./modules/storage.nix
     ./modules/boot.nix
     ./modules/nix.nix
     ./modules/nixpkgs.nix
@@ -15,7 +16,6 @@
     ./modules/xserver.nix
     ./modules/sound.nix
     ./modules/vpn.nix
-    ./services/hibernate.nix
     <home-manager/nixos>
   ];
 
