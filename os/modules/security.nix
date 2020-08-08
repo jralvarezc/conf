@@ -1,5 +1,10 @@
 { config, lib, pkgs, ...}:
 
 {
-  security.sudo.wheelNeedsPassword = false;
+  security = {
+    auditd.enable = true;
+    protectKernelImage = true;
+    hideProcessInformation = true;
+    sudo.wheelNeedsPassword = false;
+  };
 }
