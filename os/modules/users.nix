@@ -11,4 +11,12 @@
     isNormalUser = true;
     uid = 1000;
   };
+
+  home-manager.users.ralvarez = ../../home/conf.nix;
+
+  home-manager = {
+    useUserPackages = true;
+    useGlobalPkgs = true;
+  };
+
 }

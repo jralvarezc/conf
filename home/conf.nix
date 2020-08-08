@@ -12,8 +12,6 @@ in
 
   systemd.user.startServices = true;
 
-  nixpkgs.config.allowUnfree = true;
-
   home.packages = with pkgs; [
     (import ./wrappers/restic-b2.nix)
     teams # chat
@@ -29,7 +27,7 @@ in
     vorbis-tools ffmpeg # sound
     emacs25-nox
     diction aspell aspellDicts.es aspellDicts.en
-    libreoffice-still # editors
+    #libreoffice-still # editors
     gitlab-runner # ci
     arandr autorandr # monitor
     termite tmux # terminal
@@ -152,11 +150,6 @@ in
 
   home.file.".emacs".source = ./sources/emacs;
   home.file.".gitconfig".source = ./sources/gitconfig;
-  home.file.".tmux.conf".source = ./sources/tmux.conf;
-  home.file.".tmux" = {
-    source = ./sources/tmux;
-    recursive = true;
-  };
 
   programs.gpg.enable = true;
   home.file.".gnupg/gpg.conf".source = ./sources/gpg.conf;
@@ -188,6 +181,5 @@ in
     enable = true;
     path = "...";
   };
-
 
 }
