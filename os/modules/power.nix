@@ -3,6 +3,9 @@
 {
   services.tlp.enable = true;
 
+  # Required to hibernate. Is the default but is better explicit
+  security.protectKernelImage = false;
+
   services.logind = {
     lidSwitch = "hibernate";
     lidSwitchExternalPower = "ignore";
