@@ -1,12 +1,12 @@
 {config, lib, pkgs, ...}:
 
 let
-  c = import ../wrappers/restic-b2.nix;
+  cmd = pkgs.callPackage ../wrappers/restic-b2.nix {};
 in
 {
   systemd.user.services.backup = {
     Service.Type = "oneshot";
-    Service.ExecStart = ''${c}/bin/restic-b2 backup --one-file-system --verbose\
+    Service.ExecStart = ''${cmd}/bin/restic-b2 backup --one-file-system --verbose\
                            --exclude=/home/ralvarez/.cache\
                            --verbose /home/ralvarez'';
   };
@@ -21,7 +21,7 @@ in
 
   systemd.user.services.prune = {
     Service.Type = "oneshot";
-    Service.ExecStart = ''${c} forget --prune --keep-last 1 --keep-within 24h\
+    Service.ExecStart = ''${cmd} forget --prune --keep-last 1 --keep-within 24h\
                             --keep-daily 7 --keep-weekly 12 --keep-monthly 36\
                             --keep-yearly 15'';
   };

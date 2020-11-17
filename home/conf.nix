@@ -3,6 +3,7 @@
 let
   inherit (pkgs) callPackage;
   pgp-fp = "CED96DF463D7B86A1C4B1322BE6C92145BFF4A34";
+  restic-b2 = pkgs.callPackage ./wrappers/restic-b2.nix {};
 in
 {
 
@@ -13,7 +14,7 @@ in
   systemd.user.startServices = true;
 
   home.packages = with pkgs; [
-    (import ./wrappers/restic-b2.nix)
+    restic-b2
     teams # chat
     wget git bc zip unzip tree fzf # tools
     mkpasswd pwgen # crypto

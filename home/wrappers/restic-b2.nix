@@ -1,4 +1,4 @@
-with import <nixpkgs> {};
+{config, lib, pkgs, stdenv, ...}:
 
 let
   cmd = "restic-b2";
@@ -6,7 +6,7 @@ let
   sops = "${pkgs.sops}/bin/sops";
   secret = (v: "export ${v}=\$(${sops} -d --extract '[\"${v}\"]' ${store})");
   wrapper = pkgs.writeShellScriptBin cmd ''
-    export PATH=${lib.makeBinPath [ sops gnupg ]}
+    export PATH=${lib.makeBinPath [ sops pkgs.gnupg ]}
     ${secret "B2_ACCOUNT_ID"}
     ${secret "B2_ACCOUNT_KEY"}
     ${secret "RESTIC_PASSWORD"}
