@@ -32,7 +32,8 @@
   };
 
   environment.systemPackages = with pkgs; [
-    termite
+    kitty
+    mullvad-vpn
     xscreensaver i3status i3lock i3blocks dmenu # wm
     dunst libnotify
     font-manager powerline-fonts

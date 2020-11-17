@@ -164,7 +164,8 @@ in
   xdg.configFile."i3/config".source = ./sources/i3.conf;
   xdg.configFile."i3status/config".source = ./sources/i3status.conf;
 
-  xdg.configFile."termite/config".source = ./sources/termite.conf;
+  xdg.configFile."kitty/kitty.conf".source = ./sources/kitty/kitty.conf;
+  xdg.configFile."kitty/theme.conf".source = ./sources/kitty/themes/tango-dark.conf;
 
   xdg.configFile."user-dirs.dirs".text = ''
     XDG_DESKTOP_DIR="$HOME/xdg/desktop"
