@@ -25,12 +25,9 @@ in
     zathura feh maim xclip xorg.xev graphviz # viewers
     mplayer
     vorbis-tools ffmpeg # sound
-    emacs25-nox
+    emacs-nox
     diction aspell aspellDicts.es aspellDicts.en
-    #libreoffice-still # editors
-    gitlab-runner # ci
     arandr autorandr # monitor
-    termite tmux # terminal
     xorg.xbacklight
     keybase kbfs keybase-gui # sequoia # pgp
     _1password sops # password
@@ -96,6 +93,7 @@ in
     enableCompletion = true;
     defaultKeymap = "emacs";
     dotDir = ".config/zsh";
+
     history = {
       expireDuplicatesFirst = true;
       path = ".config/zsh/.zsh_history";
@@ -103,11 +101,13 @@ in
       share = true;
       size = 1000000;
     };
+
     initExtra = ''
 	    sops -d conf/secrets.yml > /dev/null 2>&1
       bindkey '^R' history-incremental-search-backward
     '';
-    shellAliases = {
+
+   shellAliases = {
       mv = "mv -i";
       cp = "cp -i";
       rm = "rm -i";
@@ -124,6 +124,7 @@ in
       nano = "echo Use: emacs";
       vi = "echo Use: emacs";
     };
+
     oh-my-zsh = {
       enable = true;
       plugins = ["git" "pip" "sudo" "command-not-found"];
