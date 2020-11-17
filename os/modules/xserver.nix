@@ -22,7 +22,7 @@
     xautolock = {
       enable = true;
       locker = "${pkgs.i3lock}/bin/i3lock -f -c 000000";
-      time = 3;
+      time = 10;
     };
   };
 
