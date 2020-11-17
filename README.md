@@ -10,13 +10,18 @@ user (wheel group)
 $ ./setup.sh
 ```
 
-3. Change configuration accordingly and rebuild whenever necesary:
+3. Nix flake update
+```
+$ nix flake update
+```
+
+4. Change configuration accordingly and rebuild whenever necesary:
 ```
 $ cd conf
 $ sudo nixos-rebuild --flake .#auto switch
 ```
 
-4. Garbage collection (from time to time)
+5. Garbage collection (from time to time)
 ```
 $ nix-collect-garbage -d && sudo nix-collect-garbage -d
 ```
