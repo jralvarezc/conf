@@ -1,4 +1,20 @@
 
+* literate programming with nix
+  https://github.com/rasendubi/dotfiles
+
+* nix flakes pinning for nix command in nixos
+  https://www.tweag.io/blog/2020-07-31-nixos-flakes/
+  https://github.com/johnae/world/blob/master/flake.nix#L121
+  https://github.com/johnae/world/blob/master/profiles/defaults.nix#L14
+  But didnt work!
+
+* Development environment for nix flakes?
+  https://github.com/nrdxp/nixflk/blob/template/shell.nix
+  https://github.com/johnae/world/blob/master/shell.nix
+
+* Use nixos-hardware database? 6th or 7th gen
+  https://github.com/NixOS/nixos-hardware#using-nix-flakes-support
+
 * native nix with sops
   https://github.com/Mic92/sops-nix
 
@@ -24,6 +40,9 @@
 
 * prevent usb wakeup
   https://github.com/johnae/nixos-configuration/blob/master/modules/services/disable-usb-wakeup.nix
+
+* security cpu mitigations
+  https://github.com/nrdxp/nixflk/blob/template/modules/security/mitigations.nix
 
 * ssh-agent start nixified
   - https://github.com/epage/nixos-config/blob/8fca7aab30e01ab92c8267eb17516bb123b222fe/profiles/security.nix
