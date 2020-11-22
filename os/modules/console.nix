@@ -11,7 +11,7 @@
     home-manager
     pciutils htop ltrace file patchelf which psmisc traceroute
     bind binutils vim # tools
-    nix-index nix-prefetch-scripts
+    nix-index
     evtest
     acpi nano vim
   ];
