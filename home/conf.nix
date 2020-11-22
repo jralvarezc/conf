@@ -16,7 +16,7 @@ in
   home.packages = with pkgs; [
     restic-b2
     teams # chat
-    wget git bc zip unzip tree fzf # tools
+    wget git bc zip unzip unrar tree fzf # tools
     mkpasswd pwgen # crypto
     nox # nix
     freemind vym xmind # mind mapping
