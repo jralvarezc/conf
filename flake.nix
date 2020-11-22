@@ -11,13 +11,16 @@
   };
 
 
-  outputs = { home-manager, nixpkgs, ... }: {
+  outputs = { self, ... }@inputs: {
     nixosConfigurations = {
-      auto = nixpkgs.lib.nixosSystem {
+     auto = inputs.nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = {
+          inherit inputs;
+        };
         modules = [
           ./os/conf.nix
-          home-manager.nixosModules.home-manager {
+          inputs.home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.ralvarez = import ./home/conf.nix;

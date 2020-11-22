@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ...}:
+{ config, lib, pkgs, inputs, ...}:
 
 {
   nix = {
@@ -8,6 +8,10 @@
     extraOptions = ''
       experimental-features = nix-command flakes
     '';
+
+    registry.nixpkgs.flake = inputs.nixpkgs;
+
+    nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 
     maxJobs = lib.mkDefault 8;
 
