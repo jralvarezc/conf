@@ -12,7 +12,7 @@ $ ./setup.sh
 
 3. Nix flake update
 ```
-$ nix flake update
+$ nix flake update --recreate-lock-file
 ```
 
 4. Change configuration accordingly and rebuild whenever necesary:
