@@ -1,5 +1,13 @@
 # NixOS and Home-Manager Configuration
 
+"Doing anything in Nix causes me untold pain and suffering, and wastes absurd
+amounts of my time … unless it follows a path already well-trodden by me
+personally. I put myself through this because I know that, after all the pain,
+suffering and wasted time, if eventually I reach my destination, I will have a
+robust, reliable, reusable solution which will save me even more pain,
+suffering and time in the long run." Jacek Generowicz
+
+
 ## Usage
 
 1. Clone this repo
