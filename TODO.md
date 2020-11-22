@@ -7,9 +7,9 @@
   https://github.com/taktoa/server-config
 
 * flake based config
-  https://github.com/davidtwco/veritas (best flake and home-manager monorepo) BEST
-  https://github.com/johnae/world/tree/94b4c43758803c6b0279584e1858551a0a3435f1
-  https://github.com/johnae/nixos-configuration/blob/master/defaults/defaults.nix
+  https://github.com/davidtwco/veritas
+  https://github.com/nrdxp/nixflk
+  https://github.com/johnae/world
 
 * remove home-manager and simplify config with nixos-modules
 
