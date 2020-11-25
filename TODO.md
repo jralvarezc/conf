@@ -1,4 +1,8 @@
 
+* use flakes sops-nix
+  https://github.com/Mic92/sops-nix/
+  https://github.com/search?q=filename%3Aflake.nix+sops-nix.url&type=code
+
 * literate programming with nix
   https://github.com/rasendubi/dotfiles
 
