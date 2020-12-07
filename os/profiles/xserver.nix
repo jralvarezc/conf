@@ -23,7 +23,6 @@
 
   environment.systemPackages = with pkgs; [
     kitty
-    dunst
     libnotify
     font-manager
     powerline-fonts

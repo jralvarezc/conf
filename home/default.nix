@@ -19,11 +19,6 @@
     #./programs/tresorit
   ];
 
-#  programs.home-manager = {
-#    enable = true;
-#    path = "...";
-#  };
-
   home.sessionVariables = {
     PAGER = "less -R";
     SOPS_PGP_FP = "CED96DF463D7B86A1C4B1322BE6C92145BFF4A34";

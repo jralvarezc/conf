@@ -8,7 +8,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-    home-manager
     pciutils htop ltrace file patchelf which psmisc traceroute
     bind binutils vim # tools
     nix-index
