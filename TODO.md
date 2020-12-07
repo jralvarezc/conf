@@ -1,3 +1,12 @@
+* move i3 and xmonad profiles at os level to user level
+  https://github.com/gvolpe/nix-config/blob/master/home/home.nix
+
+* remove sources directory and store each file in the appropiate directory
+  using for each program, profile, source, a dir and default.nix
+
+* move from i3 to xmonad
+  less memory
+  more hackable
 
 * use flakes sops-nix
   https://github.com/Mic92/sops-nix/
