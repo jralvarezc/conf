@@ -1,7 +1,7 @@
 { config, pkgs, ...}:
 
 {
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+  # Don't forget to set a password with ‘passwd’.
   users.extraUsers.ralvarez = {
     createHome = true;
     extraGroups = ["wheel" "video" "audio" "disk" "networkmanager"];
@@ -10,13 +10,6 @@
     home = "/home/ralvarez";
     isNormalUser = true;
     uid = 1000;
-  };
-
-  home-manager.users.ralvarez = ../../home/conf.nix;
-
-  home-manager = {
-    useUserPackages = true;
-    useGlobalPkgs = true;
   };
 
 }

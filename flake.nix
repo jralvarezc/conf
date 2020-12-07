@@ -19,11 +19,11 @@
           inherit inputs;
         };
         modules = [
-          ./os/conf.nix
+          ./os
           inputs.home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.ralvarez = import ./home/conf.nix;
+            home-manager.users.ralvarez = import ./home;
           }
         ];
       };

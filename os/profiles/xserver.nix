@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 
 {
+
   xdg.portal.enable = true;
 
   services.xserver = {
@@ -13,17 +14,6 @@
       user = "ralvarez";
     };
 
-    displayManager.defaultSession = "none+i3";
-
-    windowManager = {
-      i3.enable = true;
-    };
-
-    xautolock = {
-      enable = true;
-      locker = "${pkgs.i3lock}/bin/i3lock -f -c 000000";
-      time = 10;
-    };
   };
 
   fonts = {
@@ -33,11 +23,10 @@
 
   environment.systemPackages = with pkgs; [
     kitty
-    mullvad-vpn
-    xscreensaver i3status i3lock i3blocks dmenu # wm
-    dunst libnotify
-    font-manager powerline-fonts
+    dunst
+    libnotify
+    font-manager
+    powerline-fonts
   ];
-
 
 }

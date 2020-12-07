@@ -1,7 +1,7 @@
 {config, lib, pkgs, ...}:
 
 let
-  cmd = pkgs.callPackage ../wrappers/restic-b2.nix {};
+  cmd = pkgs.callPackage ./restic-b2.nix {};
 in
 {
   systemd.user.services.backup = {

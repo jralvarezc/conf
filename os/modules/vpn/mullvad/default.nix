@@ -11,6 +11,10 @@ with lib; {
 
   config = mkIf config.modules.services.mullvad.enable {
 
+    environment.systemPackages = with pkgs; [
+      mullvad-vpn
+    ];
+
     boot.extraModulePackages = [ config.boot.kernelPackages.wireguard ];
 
     boot.kernelModules = [ "tun" ];
