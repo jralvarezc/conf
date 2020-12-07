@@ -12,26 +12,14 @@ suffering and time in the long run." Jacek Generowicz
 
 1. Clone this repo
 
-2. Relocate main config files to allow simple editing as non-admin
-user (wheel group)
+3. Update, rebuild and switch
 ```
-$ ./setup.sh
-```
-
-3. Nix flake update
-```
-$ nix flake update --recreate-lock-file
+$ ./build.sh
 ```
 
-4. Change configuration accordingly and rebuild whenever necesary:
+5. Collect garbate
 ```
-$ cd conf
-$ sudo nixos-rebuild --flake .#auto switch
-```
-
-5. Garbage collection (from time to time)
-```
-$ nix-collect-garbage -d && sudo nix-collect-garbage -d
+$ ./clean.sh
 ```
 
 ## Goals
