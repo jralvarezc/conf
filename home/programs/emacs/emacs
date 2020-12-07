@@ -60,7 +60,7 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 
 ;; Always confirm after quiting
-(setq confirm-kill-emacs 'yes-or-no-p)
+;; (setq confirm-kill-emacs 'yes-or-no-p)
 
 ;; Always numbering lines with padding in solid line in format
 (global-linum-mode t)
