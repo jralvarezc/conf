@@ -7,7 +7,7 @@
 
   services.screen-locker = {
     enable = true;
-    inactiveInterval = 1;
+    inactiveInterval = 5;
     lockCmd = "${pkgs.i3lock}/bin/i3lock -f -c 000000";
   };
 
