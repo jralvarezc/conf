@@ -1,15 +1,11 @@
 { config, lib, pkgs, ...}:
 
 {
-  console = {
-    font = "ter-i32b";
-    packages = with pkgs; [ terminus_font ];
-    earlySetup = true;
-  };
+  console.earlySetup = true;
 
   environment.systemPackages = with pkgs; [
     pciutils htop ltrace file patchelf which psmisc traceroute
-    bind binutils vim # tools
+    bind binutils vim neovim # tools
     nix-index
     evtest
     acpi nano vim

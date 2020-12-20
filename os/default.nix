@@ -13,6 +13,7 @@
     ./profiles/power.nix
     ./profiles/network.nix
     ./profiles/console.nix
+    ./profiles/fonts.nix
     ./profiles/xserver.nix
     ./profiles/wm/i3
 #    ./profiles/wm/xmonad
