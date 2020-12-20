@@ -7,29 +7,98 @@ in
 {
 
   home.packages = with pkgs; [
+    # transfer
     restic-b2
-    teams # chat
-    wget git bc zip unzip unrar tree fzf # tools
-    mkpasswd pwgen # crypto
-    nox # nix
-    neovim
-    freemind vym xmind # mind mapping
-    # for jekyll (TODO: move to dev-env)
-    bundler zlib bundix
-    opencv openssl xorg.libXmu stdenv.cc # timedoctor
-    zathura feh maim xclip xorg.xev graphviz # viewers
-    mplayer
-    vorbis-tools ffmpeg # sound
+    wget
+    magic-wormhole
+
+    # files
+    tree
+    lf
+    nnn
+    fd
+    bat
+    ripgrep
+    exa
+    pcre2
+    pcre
+    most
+    fzf
+
+    # compress
+    zip
+    unzip
+    unrar
+
+    # edit
     emacs-nox
-    diction aspell aspellDicts.es aspellDicts.en
-    arandr autorandr # monitor
+    diction
+    aspell aspellDicts.es aspellDicts.en
+
+    # devel
+    git
+    lazygit
+    tokei
+    cloc
+    nixfmt
+    nix-linter
+
+    # crypto
+    mkpasswd
+    pwgen
+    age
+    sequoia
+    keybase kbfs keybase-gui
+    _1password
+    sops
+
+    # network
+    netcat-gnu
+    nmap
+
+    # browser
+    chromium
+    brave
+    firefox
+    links
+    lynx
+
+    # calc
+    bc
+    eva
+
+    xsv wtf neofetch
+
+    # monitor
+    arandr
+    autorandr
     xorg.xbacklight
-    keybase kbfs keybase-gui # sequoia # pgp
-    _1password sops # password
-    chromium brave firefox links lynx # browsers
-    netcat-gnu nmap
-    bat ripgrep eva exa
-    pcre2 pcre most
+
+    # image
+    zathura
+    feh
+    maim
+    xclip
+    xorg.xev
+    graphviz
+
+    # media
+    mplayer
+    vorbis-tools
+    ffmpeg
+
+    # conference
+    teams
+
+    # mind mapping
+    freemind
+    vym
+    xmind
+
+    # for jekyll (TODO: move to dev-env)
+    #bundler zlib bundix
+    #opencv openssl xorg.libXmu stdenv.cc # timedoctor
+
   ];
 
 }
