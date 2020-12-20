@@ -10,7 +10,6 @@
     };
   };
 
-
   outputs = { self, ... }@inputs: {
     nixosConfigurations = {
      auto = inputs.nixpkgs.lib.nixosSystem {
@@ -23,12 +22,14 @@
           inputs.home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
+            home-manager.verbose = true;
             home-manager.users.ralvarez = import ./home;
           }
         ];
+
       };
     };
-  };
 
+  };
 
 }
