@@ -1,3 +1,20 @@
+
+* nixos template with flakes
+  https://github.com/bqv/nixrc
+  https://github.com/nrdxp/nixflk/
+  https://github.com/colemickens/nixos-flake-example
+
+* split hosts and users in different dirs
+  https://github.com/bqv/nixrc/tree/master/hosts
+  https://github.com/bqv/nixrc/tree/master/users
+
+* update format with nixfmt
+
+* ephemeral root directory
+  https://github.com/cole-h/nixos-config
+
+* nix-linter, run ./lint.sh
+
 * move i3 and xmonad profiles at os level to user level
   https://github.com/gvolpe/nix-config/blob/master/home/home.nix
 

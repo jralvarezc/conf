@@ -12,14 +12,19 @@ suffering and time in the long run." Jacek Generowicz
 
 1. Clone this repo
 
-3. Update, rebuild and switch
+2. Update, rebuild, switch and clean
 ```
-$ ./build.sh
+$ ./update.sh
 ```
 
-5. Collect garbate
+3. Search for software:
 ```
-$ ./clean.sh
+$ nix search nixpkgs '\.mutt$'
+```
+
+4. Test new software without installing it:
+```
+$ nix run nixpkgs#mutt
 ```
 
 ## Goals
@@ -30,23 +35,18 @@ $ ./clean.sh
 2. Minimal attack surface (less apps, simpler apps, minimal customization)
    - currently: i3+kitty+restic (800 LOC)
 ```
-$ nix-shell -p cloc --run "cloc conf"
-cloc conf
-      38 text files.
-      38 unique files.
-      15 files ignored.
-
-github.com/AlDanial/cloc v 1.84  T=0.07 s (342.7 files/s, 15241.4 lines/s)
--------------------------------------------------------------------------------
-Language                     files          blank        comment           code
--------------------------------------------------------------------------------
-Nix                             21            123             32            584
-Markdown                         2             93              0            244
-YAML                             1              1              0             30
-Bourne Shell                     1              1              0              4
--------------------------------------------------------------------------------
-SUM:                            25            218             32            862
--------------------------------------------------------------------------------
+$ nix run nixpkgs#tokei .
+===============================================================================
+ Language            Files        Lines         Code     Comments       Blanks
+===============================================================================
+ Haskell                 1            7            5            1            1
+ Markdown                2          390            0          283          107
+ Nix                    36          948          685           86          177
+ Shell                   2           38           29            4            5
+ YAML                    1           31           30            0            1
+===============================================================================
+ Total                  42         1414          749          374          291
+===============================================================================
 ```
 
 3. Reproducible setup (pinned versions, one step build)
