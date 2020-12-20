@@ -1,4 +1,4 @@
-{config, lib, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
 
@@ -6,16 +6,20 @@
     enable = true;
     enableZshIntegration = true;
     verbs = [
-      { invocation = "edit";
+      {
+        invocation = "edit";
         key = "enter";
         shortcut = "e";
         execution = "$EDITOR {file}";
-        leave_broot = false; }
-      { invocation = "preview_text";
+        leave_broot = false;
+      }
+      {
+        invocation = "preview_text";
         key = "enter";
         shortcut = "bat";
         execution = "bat {file}";
-        leave_broot = false; }
+        leave_broot = false;
+      }
     ];
   };
 

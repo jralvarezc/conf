@@ -11,9 +11,7 @@ with lib; {
 
   config = mkIf config.modules.services.mullvad.enable {
 
-    environment.systemPackages = with pkgs; [
-      mullvad-vpn
-    ];
+    environment.systemPackages = with pkgs; [ mullvad-vpn ];
 
     boot.extraModulePackages = [ config.boot.kernelPackages.wireguard ];
 
@@ -23,7 +21,7 @@ with lib; {
     networking.iproute2.enable = true;
 
     # mullvad non-logging dns, and mkForce to avoid concat with defaults
-    networking.nameservers =  pkgs.lib.mkForce [ "193.138.218.74" ];
+    networking.nameservers = pkgs.lib.mkForce [ "193.138.218.74" ];
 
     systemd.services.mullvad-daemon = {
       description = "Mullvad VPN daemon";
@@ -42,9 +40,9 @@ with lib; {
       serviceConfig = {
         StartLimitBurst = 5;
         StartLimitIntervalSec = 20;
-        ExecStart =
-          "${pkgs.mullvad-vpn}/bin/mullvad-daemon -v
-                                     --disable-stdout-timestamps";
+        ExecStart = ''
+          ${pkgs.mullvad-vpn}/bin/mullvad-daemon -v
+                                               --disable-stdout-timestamps'';
         Restart = "always";
         RestartSec = 1;
       };
@@ -52,7 +50,6 @@ with lib; {
   };
 
 }
-
 
 # Setup commands
 # $ mullvad factory-reset

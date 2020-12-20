@@ -9,13 +9,9 @@
   boot = {
     initrd = {
 
-      kernelModules = [
-        "kvm-intel" "acpi" "thinkpad-acpi" "acpi-call"
-      ];
+      kernelModules = [ "kvm-intel" "acpi" "thinkpad-acpi" "acpi-call" ];
 
-      availableKernelModules = [
-        "xhci_pci" "nvme" "usb_storage" "sd_mod"
-      ];
+      availableKernelModules = [ "xhci_pci" "nvme" "usb_storage" "sd_mod" ];
     };
 
     extraModulePackages = [ config.boot.kernelPackages.acpi_call ];

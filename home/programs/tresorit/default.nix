@@ -1,6 +1,6 @@
-{}:
+{ }:
 
-with import <nixpkgs> {};
+with import <nixpkgs> { };
 
 stdenv.mkDerivation rec {
 
@@ -8,22 +8,19 @@ stdenv.mkDerivation rec {
   name = "tresorit-${version}";
 
   src = fetchurl {
-    url = https://installerstorage.blob.core.windows.net/public/install/tresorit_installer.run;
+    url =
+      "https://installerstorage.blob.core.windows.net/public/install/tresorit_installer.run";
     sha256 = "0qrb9sjg5p9zs4r9bbzldgmx7jy27gq7vkmnwvfrfrgzl702lqw1";
   };
 
   nativeBuildInputs = [ autoPatchelfHook ];
-  buildInputs = [ xorg.libXext
-                  xorg.libxcb
-                  xorg.libX11
-                  fuse
-                  libGL ];
+  buildInputs = [ xorg.libXext xorg.libxcb xorg.libX11 fuse libGL ];
 
   dontBuild = true;
   dontConfigure = true;
   dontMake = true;
 
-  unpackPhase  = ''
+  unpackPhase = ''
     tail -n+94 $src | tar xz -C $TMP
   '';
 
@@ -34,8 +31,9 @@ stdenv.mkDerivation rec {
   '';
 
   meta = with stdenv.lib; {
-    description = "Tresorit is the ultra-secure place in the cloud to store, sync and share files easily from anywhere, anytime.";
-    homepage = https://tresorit.com;
+    description =
+      "Tresorit is the ultra-secure place in the cloud to store, sync and share files easily from anywhere, anytime.";
+    homepage = "https://tresorit.com";
     license = licenses.unfree;
     platforms = platforms.linux;
     maintainers = [ maintainers.apeyroux ];

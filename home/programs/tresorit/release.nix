@@ -1,12 +1,14 @@
-with import <nixpkgs> {};
+with import <nixpkgs> { };
 
 let
-  installUsage = "You must first run install-tresorit-impure before using this command.";
-  pure = import ./default.nix {};
-  run-tresorit-install-script = writeShellScriptBin "install-tresorit-impure" ''
-    mkdir -p $HOME/.local/tresorit
-    cp -rf ${pure}/bin/* $HOME/.local/tresorit/
-  '';
+  installUsage =
+    "You must first run install-tresorit-impure before using this command.";
+  pure = import ./default.nix { };
+  run-tresorit-install-script =
+    writeShellScriptBin "install-tresorit-impure" ''
+      mkdir -p $HOME/.local/tresorit
+      cp -rf ${pure}/bin/* $HOME/.local/tresorit/
+    '';
   run-tresorit-script = writeShellScriptBin "tresorit-impure" ''
     BIN=$HOME/.local/tresorit/tresorit
     if [ -f $BIN ]; then

@@ -1,14 +1,13 @@
-{config, lib, pkgs, ...}:
+{ config, lib, pkgs, ... }:
 
-let
-  cmd = pkgs.callPackage ./restic-b2.nix {};
-in
-{
+let cmd = pkgs.callPackage ./restic-b2.nix { };
+in {
   systemd.user.services.backup = {
     Service.Type = "oneshot";
-    Service.ExecStart = ''${cmd}/bin/restic-b2 backup --one-file-system --verbose\
-                           --exclude=/home/ralvarez/.cache\
-                           --verbose /home/ralvarez'';
+    Service.ExecStart = ''
+      ${cmd}/bin/restic-b2 backup --one-file-system --verbose\
+                                 --exclude=/home/ralvarez/.cache\
+                                 --verbose /home/ralvarez'';
   };
 
   systemd.user.timers.backup = {
@@ -21,9 +20,10 @@ in
 
   systemd.user.services.prune = {
     Service.Type = "oneshot";
-    Service.ExecStart = ''${cmd} forget --prune --keep-last 1 --keep-within 24h\
-                            --keep-daily 7 --keep-weekly 12 --keep-monthly 36\
-                            --keep-yearly 15'';
+    Service.ExecStart = ''
+      ${cmd} forget --prune --keep-last 1 --keep-within 24h\
+                                  --keep-daily 7 --keep-weekly 12 --keep-monthly 36\
+                                  --keep-yearly 15'';
   };
 
   systemd.user.timers.prune = {

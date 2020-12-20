@@ -1,10 +1,10 @@
-{config, lib, pkgs, stdenv, ...}:
+{ config, lib, pkgs, stdenv, ... }:
 
 let
   cmd = "restic-b2";
   store = ../../../secrets.yml;
   sops = "${pkgs.sops}/bin/sops";
-  secret = (v: "export ${v}=\$(${sops} -d --extract '[\"${v}\"]' ${store})");
+  secret = (v: ''export ${v}=$(${sops} -d --extract '["${v}"]' ${store})'');
   wrapper = pkgs.writeShellScriptBin cmd ''
     export PATH=${lib.makeBinPath [ sops pkgs.gnupg ]}
     ${secret "B2_ACCOUNT_ID"}

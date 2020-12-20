@@ -1,4 +1,4 @@
-{ config, lib, pkgs, inputs, ...}:
+{ config, lib, pkgs, inputs, ... }:
 
 {
   nix = {
@@ -11,9 +11,7 @@
 
     registry.nixpkgs.flake = inputs.nixpkgs;
 
-    nixPath = [
-      "nixpkgs=${inputs.nixpkgs}"
-    ];
+    nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 
     maxJobs = lib.mkDefault 8;
 

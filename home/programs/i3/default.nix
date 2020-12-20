@@ -1,4 +1,4 @@
-{config, lib, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
 
@@ -11,9 +11,6 @@
     lockCmd = "${pkgs.i3lock}/bin/i3lock -f -c 000000";
   };
 
-  home.packages = with pkgs; [
-    i3status
-    dmenu
-  ];
+  home.packages = with pkgs; [ i3status dmenu ];
 
 }

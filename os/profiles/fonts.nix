@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ...}:
+{ config, lib, pkgs, ... }:
 
 {
 
@@ -8,11 +8,7 @@
   };
 
   environment.systemPackages = let
-    nerdfonts-jbm = pkgs.nerdfonts.override {
-      fonts = ["JetBrainsMono"];
-    };
-  in [
-    nerdfonts-jbm
-  ];
+    nerdfonts-jbm = pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; };
+    in [ nerdfonts-jbm ];
 
 }

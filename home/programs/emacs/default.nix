@@ -1,5 +1,4 @@
-{config, lib, pkgs, ... }:
-{
+{ config, lib, pkgs, ... }: {
 
   home.file.".emacs".source = ./emacs;
   home.sessionVariables.EDITOR = "emacs";

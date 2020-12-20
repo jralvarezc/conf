@@ -1,8 +1,8 @@
 {
 
- description = "NixOS configuration";
+  description = "NixOS configuration";
 
- inputs = {
+  inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -12,14 +12,13 @@
 
   outputs = { self, ... }@inputs: {
     nixosConfigurations = {
-     auto = inputs.nixpkgs.lib.nixosSystem {
+      auto = inputs.nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = {
-          inherit inputs;
-        };
+        specialArgs = { inherit inputs; };
         modules = [
           ./os
-          inputs.home-manager.nixosModules.home-manager {
+          inputs.home-manager.nixosModules.home-manager
+          {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.verbose = true;

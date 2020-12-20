@@ -1,10 +1,9 @@
-{config, lib, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 let
   inherit (pkgs) callPackage;
-  restic-b2 = pkgs.callPackage ./services/restic/restic-b2.nix {};
-in
-{
+  restic-b2 = pkgs.callPackage ./services/restic/restic-b2.nix { };
+in {
 
   home.packages = with pkgs; [
     # transfer
@@ -33,7 +32,9 @@ in
     # edit
     emacs-nox
     diction
-    aspell aspellDicts.es aspellDicts.en
+    aspell
+    aspellDicts.es
+    aspellDicts.en
 
     # devel
     git
@@ -48,7 +49,9 @@ in
     pwgen
     age
     sequoia
-    keybase kbfs keybase-gui
+    keybase
+    kbfs
+    keybase-gui
     _1password
     sops
 
@@ -67,7 +70,9 @@ in
     bc
     eva
 
-    xsv wtf neofetch
+    xsv
+    wtf
+    neofetch
 
     # monitor
     arandr

@@ -1,14 +1,26 @@
-{ config, lib, pkgs, ...}:
+{ config, lib, pkgs, ... }:
 
 {
   console.earlySetup = true;
 
   environment.systemPackages = with pkgs; [
-    pciutils htop ltrace file patchelf which psmisc traceroute
-    bind binutils vim neovim # tools
+    pciutils
+    htop
+    ltrace
+    file
+    patchelf
+    which
+    psmisc
+    traceroute
+    bind
+    binutils
+    vim
+    neovim # tools
     nix-index
     evtest
-    acpi nano vim
+    acpi
+    nano
+    vim
   ];
 
   programs = {

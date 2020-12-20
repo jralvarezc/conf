@@ -39,7 +39,7 @@
               fi
 
       }
-      '';
+    '';
   };
   # After change you need to manually restart the service
   # $ systemctl disable hibernate --user && systemctl enable hibernate --user

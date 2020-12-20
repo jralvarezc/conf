@@ -16,7 +16,7 @@
     ./profiles/fonts.nix
     ./profiles/xserver.nix
     ./profiles/wm/i3
-#    ./profiles/wm/xmonad
+    #    ./profiles/wm/xmonad
     ./profiles/sound.nix
     ./modules/vpn/mullvad
   ];
