@@ -29,7 +29,10 @@
       mv = "mv -i";
       cp = "cp -i";
       rm = "rm -i";
-      ls = "ls --color=always";
+      ls = "exa";
+      cat = "bat";
+      less = "bat";
+      more = "bat";
       rg = "rg --color=always";
       jq = "jq -C";
       prune = ''restic-b2 forget --prune --keep-last 1 --keep-within 24h\
