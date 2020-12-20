@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -euo pipefail
+set -uo pipefail
 set -x
 
 nix-linter \
@@ -25,3 +25,6 @@ nix-linter \
     -W EmptyVariadicParamSet \
     -W UnneededAntiquote \
     -r .
+
+find . -iname "*.sh" -exec \
+     shellcheck -o all {} \;
