@@ -21,6 +21,8 @@
     initExtra = ''
 	    sops -d conf/secrets.yml > /dev/null 2>&1
       bindkey '^R' history-incremental-search-backward
+      neofetch
+      source ${pkgs.nix-index}/etc/profile.d/command-not-found.sh
     '';
 
    shellAliases = {
@@ -43,10 +45,12 @@
 
     oh-my-zsh = {
       enable = true;
-      plugins = ["git" "pip" "sudo" "command-not-found"];
+      plugins = ["git" "pip" "sudo"];
       theme = "agnoster";
     };
   };
+
+  programs.command-not-found.enable = false;
 
   programs.fzf.enableZshIntegration = true;
 
