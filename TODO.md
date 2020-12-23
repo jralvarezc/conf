@@ -25,6 +25,10 @@
   less memory
   more hackable
 
+* md to org? o adoc?
+  pandoc  -f markdown -t org README.md | less
+  https://github.com/novoid/github-orgmode-tests
+
 * use flakes sops-nix
   https://github.com/Mic92/sops-nix/
   https://github.com/search?q=filename%3Aflake.nix+sops-nix.url&type=code
