@@ -7,6 +7,13 @@ set -u
 set -o pipefail
 set -x
 
+# Semantic order is better than lexical
+# -W AlphabeticalArgs
+# -W AlphabeticalBindings
+
+# NixOS config requires unused args in some files
+# -W UnusedArg
+
 nix-linter \
     -W DIYInherit \
     -W EmptyInherit \
@@ -20,11 +27,8 @@ nix-linter \
     -W SetLiteralUpdate \
     -W UnfortunateArgName \
     -W UnneededRec \
-    -W UnusedArg \
     -W UnusedLetBind \
     -W UpdateEmptySet \
-    -W AlphabeticalArgs \
-    -W AlphabeticalBindings \
     -W BetaReduction \
     -W EmptyVariadicParamSet \
     -W UnneededAntiquote \
