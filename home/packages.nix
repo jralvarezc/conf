@@ -30,6 +30,7 @@ in {
     unrar
 
     # edit
+    pandoc
     emacs-nox
     diction
     aspell
