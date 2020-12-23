@@ -8,9 +8,7 @@
     extraOptions = ''
       experimental-features = nix-command flakes ca-references
     '';
-
     registry.nixpkgs.flake = inputs.nixpkgs;
-
     nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 
     maxJobs = lib.mkDefault 8;
