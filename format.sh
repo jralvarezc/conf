@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
-set -euo pipefail
+IFS=$'\n\t'
+
+set -e
+set -u
+set -o pipefail
 set -x
 
 find . -iname '*nix' -exec \

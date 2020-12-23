@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
-set -uo pipefail
+IFS=$'\n\t'
+
+set -e
+set -u
+set -o pipefail
 set -x
 
 nix-linter \
