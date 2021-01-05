@@ -44,6 +44,7 @@ in {
     cloc
     nixfmt
     nix-linter
+    just
 
     # crypto
     mkpasswd
