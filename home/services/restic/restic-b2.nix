@@ -2,7 +2,7 @@
 
 let
   cmd = "restic-b2";
-  store = ../../../secrets.yml;
+  store = ../../siri.yml;
   sops = "${pkgs.sops}/bin/sops";
   secret = (v: ''export ${v}=$(${sops} -d --extract '["${v}"]' ${store})'');
   wrapper = pkgs.writeShellScriptBin cmd ''
