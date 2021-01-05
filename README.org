@@ -16,22 +16,16 @@ and time in the long run." Jacek Generowicz
 
 1. Clone this repo
 
-2. Update, rebuild, switch and clean
+2. Update, rebuild and switch
 
 #+begin_example
-  $ ./update.sh
+  $ just update
 #+end_example
 
-3. Search for software:
+3. Format, lint, clean, search, run and more:
 
 #+begin_example
-  $ nix search nixpkgs '\.mutt$'
-#+end_example
-
-4. Test new software without installing it:
-
-#+begin_example
-  $ nix run nixpkgs#mutt
+  $ just
 #+end_example
 
 ** Goals

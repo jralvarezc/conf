@@ -1,5 +1,7 @@
-_default:
-  @just --choose
+@_default:
+  just --list --unsorted
+
+all: format update clean
 
 update:
   @echo "[INFO] Updating flake and rebuilding OS..."
@@ -41,3 +43,11 @@ lint:
     -W EmptyVariadicParamSet \
     -W UnneededAntiquote \
     -r .
+
+search pkg="mutt":
+  @echo "[INFO] Searching package {{pkg}}..."
+  nix search nixpkgs '\.{{pkg}}$'
+
+run pkg="mutt":
+  @echo "[INFO] Running package {{pkg}}..."
+  nix run nixpkgs#{{pkg}}
