@@ -19,7 +19,7 @@
     };
 
     initExtra = ''
-            sops -d conf/home/siri.yml > /dev/null 2>&1
+            sops -d conf/home/muna.yml > /dev/null 2>&1
             bindkey '^R' history-incremental-search-backward
             neofetch
             source ${pkgs.nix-index}/etc/profile.d/command-not-found.sh

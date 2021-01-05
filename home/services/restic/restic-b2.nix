@@ -2,7 +2,7 @@
 
 let
   cmd = "restic-b2";
-  store = ../../siri.yml;
+  store = ../../muna.yml;
   sops = "${pkgs.sops}/bin/sops";
   secret = (v: ''export ${v}=$(${sops} -d --extract '["${v}"]' ${store})'');
   wrapper = pkgs.writeShellScriptBin cmd ''
