@@ -17,13 +17,11 @@ and time in the long run." Jacek Generowicz
 1. Clone this repo
 
 2. Enter the dev environment
-
 #+begin_example
   $ nix develop
 #+end_example
 
 3. Update, rebuild and switch
-
 #+begin_example
   $ just update
 #+end_example
