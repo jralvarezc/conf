@@ -11,6 +11,7 @@ mkShell {
     nix-linter
     manix
     nix-tree
+    tokei
   ];
 
   shellHook = ''

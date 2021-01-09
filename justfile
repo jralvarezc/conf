@@ -16,6 +16,11 @@ clean max-age="30":
   sudo nix-collect-garbage --delete-older-than {{max-age}}d
   git gc --aggressive
 
+size:
+  @echo "[INFO] Calculating size..."
+  du . -sh --exclude=.git
+  tokei . -s code
+
 format:
   @echo "[INFO]: Formating all nix files..."
   find . -iname '*.nix' -exec nixpkgs-fmt {} \;
