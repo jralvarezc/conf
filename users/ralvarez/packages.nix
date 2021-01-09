@@ -68,7 +68,6 @@ in
     # other
     xsv
     wtf
-    neofetch
 
     # screen
     arandr
