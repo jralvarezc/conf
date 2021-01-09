@@ -45,7 +45,7 @@ and time in the long run." Jacek Generowicz
 
 2.  Minimal attack surface (less apps, simpler apps, minimal customization)
 
-    - currently: i3+kitty+restic (800 LOC)
+    - currently: i3+kitty+restic
 
     #+begin_example
     $ just size
