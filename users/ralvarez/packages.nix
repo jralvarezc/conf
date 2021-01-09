@@ -23,7 +23,6 @@ in
     pcre
     most
     fzf
-    diskus
 
     # compress
     zip
