@@ -77,7 +77,6 @@ in
 
     # image
     zathura
-    feh
     maim
     xclip
     xorg.xev

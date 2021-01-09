@@ -1,10 +1,6 @@
 
 - change keyboard function keys to FX by default
 
-- minimal code
-  wallpapers?
-  neofetch
-
 - stateless and secure
   shutdown that, before poweroff or reboot:
   remove stuff
