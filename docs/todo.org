@@ -12,10 +12,17 @@
   then poweroff/remove
   zfs snapshots or just rm -rf
 
+- ssh identity for github is declarative? sops? age?
+
 - stubby dns however mullvad includes a non logging dns server when
   - there is no vpn? killswitch?
 
+- mouse bluetooth as code according to identifiers
+
+- wifi with differed backend
+
 - workflow test same OS conf via iso with qemu
+  - https://github.com/nix-community/nixos-generators
 
 - prevent usb wakeup
   - https://github.com/johnae/nixos-configuration/blob/master/modules/services/disable-usb-wakeup.nix
@@ -128,8 +135,6 @@
 
 - how to create wrappers
   - https://github.com/leosbotelho/cartons/tree/17a800c848ffc493ca6cbdfd3917fb9fdc673eb1/pkgs/wrappers
-
-- wrappers?
   - https://github.com/JorelAli/nixos/blob/c5bcfb6666be8ea0a2a17a9c50f5dc298c9b949d/overlays/wrappers/dunst.nix
 
 - simpleXService pattern
@@ -145,25 +150,15 @@
   - https://github.com/NixOS/nixpkgs/commit/1cba74dfc1541673f91b91c3ab50dbdce43c764a
   - is it applicable to TD? to burp?
 
-- ls --color=always? rg --color always | less
-  - remove most?
-
-- rg ripgrep -2 replaces pcregrep y pcre2grep?
-
 - ciphered brtfs?
   - https://jappieklooster.nl/nixos-on-encrypted-btrfs.html
   - https://github.com/shazow/nixfiles/blob/760ed372ce17e68f71381ac2de5f3039798075a3/common/boot.nix
-
-- fzf
 
 - packaging hopenpgp-tools (not in nixos)
   - http://hackage.haskell.org/package/hopenpgp-tools
 
 - nixos config file strategies
   - https://github.com/aaronjanse/dotfiles
-
-- generate vm from config to diff format
-  - https://github.com/nix-community/nixos-generators
 
 - initialHassedPasswords with externalized secrets.nix
   - https://github.com/sylvblck/nixos-config/blob/f85d5a9a6ce3989a3453cd66f6f91c0a0a03c90a/users/sylv.nix
@@ -188,10 +183,6 @@
 
 - split xwindows conf from home-manager
   - https://rycee.net/posts/2017-07-02-manage-your-home-with-nix.html
-
-- mouse bluetooth as code according to identifiers
-
-- devenvs removed from home-manager (default.nix on git)
 
 - printer?
 
