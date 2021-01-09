@@ -10,8 +10,11 @@ update:
 
 clean max-age="30":
   @echo "[INFO] Deleting user and system garbage..."
+  nix profile info | awk '{print $NF}' | xargs nix profile remove
+  sudo nix profile info | awk '{print $NF}' | sudo xargs nix profile remove
   nix-collect-garbage --delete-older-than {{max-age}}d
   sudo nix-collect-garbage --delete-older-than {{max-age}}d
+  git gc --aggressive
 
 format:
   @echo "[INFO]: Formating all nix files..."
