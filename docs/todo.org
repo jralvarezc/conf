@@ -12,89 +12,69 @@
   then poweroff/remove
   zfs snapshots or just rm -rf
 
+- stubby dns however mullvad includes a non logging dns server when
+  - there is no vpn? killswitch?
+
+- workflow test same OS conf via iso with qemu
+
+- prevent usb wakeup
+  - https://github.com/johnae/nixos-configuration/blob/master/modules/services/disable-usb-wakeup.nix
+
+- security cpu mitigations
+  - https://github.com/nrdxp/nixflk/blob/template/modules/security/mitigations.nix
+
+- ssh-agent start nixified
+  - https://github.com/epage/nixos-config/blob/8fca7aab30e01ab92c8267eb17516bb123b222fe/profiles/security.nix
+  - https://github.com/meisternu/mynix/blob/544e76b01651c83d0c8ca81d684a81ffa0a1ea20/nixos/modules/programs/ssh.nix
+  - https://github.com/moredhel/nur-packages/blob/4a49021b91973cd4ee41127fe42de3f96f609069/home-manager/modules/crostini/core.nix
+  - https://github.com/moredhel/nur-packages/blob/4a49021b91973cd4ee41127fe42de3f96f609069/home-manager/modules/home/default.nix
+
 - from sops to nix-sop or simpler: agenix
-
-- simple flakes development environment
-  https://github.com/payasrelekar/resume/blob/master/flake.nix
-
-- nixos template with flakes https://github.com/bqv/nixrc
-  https://github.com/nrdxp/nixflk/
-  https://github.com/colemickens/nixos-flake-example
-
-- split hosts and users in different dirs
-  https://github.com/ebbertd/nixos-configuration/blob/develop/flake.nix
-  https://github.com/search?p=2&q=filename%3Aflake.nix+hosts+users&type=Code
-  https://github.com/rafiyqw/my-flake/blob/master/flake.nix
-  https://github.com/luc65r/nixconf/blob/master/flake.nix
-  https://github.com/jamesottaway/dotfiles/blob/master/flake.nix
-  https://github.com/bqv/nixrc/tree/master/hosts
-  https://github.com/bqv/nixrc/tree/master/users
-
-- update format with nixfmt
-
-- ephemeral root directory https://github.com/cole-h/nixos-config
-
-- nix-linter, run ./lint.sh
-
-- move i3 and xmonad profiles at os level to user level
-  https://github.com/gvolpe/nix-config/blob/master/home/home.nix
-
-- remove sources directory and store each file in the appropiate
-  directory using for each program, profile, source, a dir and
-  default.nix
-
-- move from i3 to xmonad less memory more hackable
-
-- md to org? o adoc? pandoc -f markdown -t org README.md | less
-  https://github.com/novoid/github-orgmode-tests
-
-- use flakes sops-nix https://github.com/Mic92/sops-nix/
-  https://github.com/search?q=filename%3Aflake.nix+sops-nix.url&type=code
-
-- literate programming with nix https://github.com/rasendubi/dotfiles
-
-- nix flakes pinning for nix command in nixos
-  https://www.tweag.io/blog/2020-07-31-nixos-flakes/
-  https://github.com/johnae/world/blob/master/flake.nix#L121
-  https://github.com/johnae/world/blob/master/profiles/defaults.nix#L14
-  But didnt work!
-
-- Development environment for nix flakes?
-  https://github.com/nrdxp/nixflk/blob/template/shell.nix
-  https://github.com/johnae/world/blob/master/shell.nix
+  - https://github.com/Mic92/sops-nix
+  - https://github.com/search?q=filename%3Aflake.nix+sops-nix.url&type=code
 
 - Use nixos-hardware database? 6th or 7th gen
-  https://github.com/NixOS/nixos-hardware#using-nix-flakes-support
+  - https://github.com/NixOS/nixos-hardware#using-nix-flakes-support
 
-- native nix with sops https://github.com/Mic92/sops-nix
+- simple flakes development environment
+  - https://github.com/payasrelekar/resume/blob/master/flake.nix
+  - https://github.com/nrdxp/nixflk/blob/template/shell.nix
+  - https://github.com/johnae/world/blob/master/shell.nix
+
+- nixos template with flakes
+  - https://github.com/bqv/nixrc
+  - https://github.com/nrdxp/nixflk/
+  - https://github.com/colemickens/nixos-flake-example
+
+- split hosts and users in different dirs
+  - https://github.com/ebbertd/nixos-configuration/blob/develop/flake.nix
+  - https://github.com/search?p=2&q=filename%3Aflake.nix+hosts+users&type=Code
+  - https://github.com/rafiyqw/my-flake/blob/master/flake.nix
+  - https://github.com/luc65r/nixconf/blob/master/flake.nix
+  - https://github.com/jamesottaway/dotfiles/blob/master/flake.nix
+  - https://github.com/bqv/nixrc/tree/master/hosts
+  - https://github.com/bqv/nixrc/tree/master/users
+
+- ephemeral root directory
+  - https://github.com/cole-h/nixos-config
+
+- move i3 and xmonad profiles at os level to user level
+  - https://github.com/gvolpe/nix-config/blob/master/home/home.nix
+
+- literate programming with nix
+  - https://github.com/rasendubi/dotfiles
 
 - reorganize based on modules https://github.com/mogria/nixos-config
   (simple, no home manager, granular split)
   https://github.com/taktoa/server-config
 
-- flake based config https://github.com/davidtwco/veritas
-  https://github.com/nrdxp/nixflk https://github.com/johnae/world
-
-- remove home-manager and simplify config with nixos-modules
+- flake based config
+  - https://github.com/davidtwco/veritas
+  - https://github.com/nrdxp/nixflk
+  - https://github.com/johnae/world
 
 - polybar native process launch for custom vpn checks or i3status-rust
   i3status-rs
-
-- stubby dns however mullvad includes a non logging dns server when
-  there is no vpn? killswitch?
-
-- prevent usb wakeup
-  https://github.com/johnae/nixos-configuration/blob/master/modules/services/disable-usb-wakeup.nix
-
-- security cpu mitigations
-  https://github.com/nrdxp/nixflk/blob/template/modules/security/mitigations.nix
-
-- ssh-agent start nixified
-
-  - https://github.com/epage/nixos-config/blob/8fca7aab30e01ab92c8267eb17516bb123b222fe/profiles/security.nix
-  - https://github.com/meisternu/mynix/blob/544e76b01651c83d0c8ca81d684a81ffa0a1ea20/nixos/modules/programs/ssh.nix
-  - https://github.com/moredhel/nur-packages/blob/4a49021b91973cd4ee41127fe42de3f96f609069/home-manager/modules/crostini/core.nix
-  - https://github.com/moredhel/nur-packages/blob/4a49021b91973cd4ee41127fe42de3f96f609069/home-manager/modules/home/default.nix
 
 - git commit editor with emacs
 
@@ -103,128 +83,89 @@
 - integrate sshagent and gpgagent a la nixos
 
 - brightness not working
+  #+begin_example
+    #Screen brightness controls Thinkpad X1 Yoga
+    # sudo apt-get install xbacklight
+    bindsym XF86MonBrightnessUp exec xbacklight -inc 25
+    bindsym XF86MonBrightnessDown exec xbacklight -dec 25
 
-#+begin_example
-  #Screen brightness controls Thinkpad X1 Yoga
-  # sudo apt-get install xbacklight
-  bindsym XF86MonBrightnessUp exec xbacklight -inc 25
-  bindsym XF86MonBrightnessDown exec xbacklight -dec 25
-
-  working
-  $ sudo tee /sys/class/backlight/intel_backlight/brightness <<< 300
-  $ sudo tee /sys/class/backlight/intel_backlight/brightness <<< 1000
-#+end_example
+    working
+    $ sudo tee /sys/class/backlight/intel_backlight/brightness <<< 300
+    $ sudo tee /sys/class/backlight/intel_backlight/brightness <<< 1000
+  #+end_example
 
 - organize configuration as modules
-
   - https://nixos.wiki/wiki/NixOS:extend_NixOS
   - https://nixos.wiki/wiki/Module#Function
 
-- json nixpining vs nix pinning
-
-  - https://gist.github.com/zimbatm/de5350245874361762b6a4dfe5366530
-
 - gitcrypt instead of sops? specially for declarative userpass?
-
   - https://github.com/tomberek/nixos.files/blob/master/.gitattributes
   - https://github.com/tomberek/nixos.files/blob/master/environment.nix#L99
 
 - nix standard project structure
-
   - https://www.reddit.com/r/NixOS/comments/8tkllx/standard_project_structure/
 
 - notify via dunst where backup is not possible to run because of
   ggpagent is not open
 
-- should be integrated home and os config?
-
-  - is there a way to run home-mananger switch using nixos-rebuild
-
 - what is the max temperature?
-
   - Jan 02 11:02:26 auto kernel: CPU2: Package temperature above
     threshold, cpu clock throttled
 
 - wasabi backup in append-only-mode with no prune operations
-
   - migrate from restic?
 
 - organize per profile configuration
-
   - https://github.com/dnixty/home-config/blob/0eaf92623f3044b9c61114b0a1a012c4d74ec5ae/modules/profiles/gpg.nix
   - https://github.com/dnixty/nixos-config
 
 - chromium with wrapper in incognito mode, allows remove brave and
   firefox
-
   - https://github.com/floscr/dotfiles-nix/blob/db7c6553736dbce0d74ca763cd1a5e2e9f4bf075/modules/browser/chromium.nix
 
 - move to wayland and swaywm
-
   - https://swaywm.org/
 
 - how to create wrappers
-
   - https://github.com/leosbotelho/cartons/tree/17a800c848ffc493ca6cbdfd3917fb9fdc673eb1/pkgs/wrappers
 
 - wrappers?
-
   - https://github.com/JorelAli/nixos/blob/c5bcfb6666be8ea0a2a17a9c50f5dc298c9b949d/overlays/wrappers/dunst.nix
 
 - simpleXService pattern
-
   - https://github.com/fiksn/nix/blob/ddde57a1ccc518298012e7a0037b89c86829fb29/nixos/profiles/i3.nix
 
 - nice example of a machine configuration
-
   - https://github.com/ktor/nixos/blob/ae6ae065e5052cba158c34b67bcad8419138e345/configuration.nix
 
 - timedoctor
-
   - https://unix.stackexchange.com/questions/522822/different-methods-to-run-a-non-nixos-executable-on-nixos
 
 - autoPatchelfHook
-
   - https://github.com/NixOS/nixpkgs/commit/1cba74dfc1541673f91b91c3ab50dbdce43c764a
   - is it applicable to TD? to burp?
 
 - ls --color=always? rg --color always | less
-
   - remove most?
 
 - rg ripgrep -2 replaces pcregrep y pcre2grep?
 
 - ciphered brtfs?
-
   - https://jappieklooster.nl/nixos-on-encrypted-btrfs.html
   - https://github.com/shazow/nixfiles/blob/760ed372ce17e68f71381ac2de5f3039798075a3/common/boot.nix
 
 - fzf
 
 - packaging hopenpgp-tools (not in nixos)
-
   - http://hackage.haskell.org/package/hopenpgp-tools
 
-- use nixpkgs.json???
-
-  - https://github.com/kmein/niveum/blob/master/nixpkgs.json
-  - https://nixos.wiki/wiki/FAQ/Pinning_Nixpkgs
-
-- wireguard vpn
-
-  - https://greycoder.com/a-list-of-wireguard-supporting-vpns-in-2019/
-  - https://github.com/nrhtr/nix-config/blob/master/thinkpad/wireguard.nix
-
 - nixos config file strategies
-
   - https://github.com/aaronjanse/dotfiles
 
 - generate vm from config to diff format
-
   - https://github.com/nix-community/nixos-generators
 
 - initialHassedPasswords with externalized secrets.nix
-
   - https://github.com/sylvblck/nixos-config/blob/f85d5a9a6ce3989a3453cd66f6f91c0a0a03c90a/users/sylv.nix
   - https://github.com/mfiano/nixos-config/blob/909a4253a16becaad7cc1c50af7d0aca04e58178/cfg/users.nix
 
@@ -235,14 +176,9 @@
 - emacs as a user service in home-manager
 
 - emacs via nix home-manager
-
   - https://github.com/BrianHicks/dotfiles.nix/blob/master/dotfiles/emacs.nix
 
 - mkdir ~/.emacs.d/auto-saves (nixify)
-
-- move to home-manager install as user by code
-
-  - https://github.com/bobvanderlinden/nix-home/blob/master/home.nix
 
 - i3 and git config nixifie
 
@@ -251,7 +187,6 @@
 - several DPI according to monitors (autorandr)
 
 - split xwindows conf from home-manager
-
   - https://rycee.net/posts/2017-07-02-manage-your-home-with-nix.html
 
 - mouse bluetooth as code according to identifiers
@@ -261,40 +196,30 @@
 - printer?
 
 - laptop config
-
   - https://github.com/Vodurden/devbox/blob/2cdbb4b2b4fac764bf7e632f70db597f8e6e7dd4/nixos/metabox/configuration.nix
 
 - bootloader efi??
 
 - swap is enabled? is encrypted?
-
   - https://github.com/shazow/nixfiles/blob/d0de6f1c68e07f19b4be7584295a16175a05b443/disk.example.nix
 
 - update intel microcode
-
   - https://github.com/dejanr/dotfiles/blob/34d40e4d59853f11f3190b2a95589f0e59175294/nix/config/nixpkgs/machines/theory/hardware-configuration.nix
 
 - thinkpad t480 kernel parameters
-
   - https://github.com/dejanr/dotfiles/blob/34d40e4d59853f11f3190b2a95589f0e59175294/nix/config/nixpkgs/machines/theory/hardware-configuration.nix
 
 - ideal conf structure
-
   - https://github.com/dejanr/dotfiles/blob/34d40e4d59853f11f3190b2a95589f0e59175294/nix/config/nixpkgs/machines/theory/hardware-configuration.nix
 
 - triggerhappy, alternativa a los problemas de actkbd por usuario root
   lanzando la solicitud
-
   - https://github.com/xantoz/nixconfig/blob/64c1fa55e065f31aa9c02c3a05e0124a304008cf/machines/nazrin/configuration.nix
 
 - tmpontmpfs y cleanTmpDir y sysctl
-
   - https://github.com/kpango/dotfiles/blob/d8453fe3b3a530292974ca0edd6677066efa4275/nix/boot.nix
 
 - usbguard
-
   - https://github.com/lesnuages/dotfiles/blob/70d7174f3b786c49c36ace890f51b2cca328d2e1/configuration.nix
-
-- workflow test same OS conf via iso with qemu
 
 - prelude vs spacemacs
