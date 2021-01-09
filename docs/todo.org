@@ -40,9 +40,6 @@
   - https://github.com/Mic92/sops-nix
   - https://github.com/search?q=filename%3Aflake.nix+sops-nix.url&type=code
 
-- Use nixos-hardware database? 6th or 7th gen
-  - https://github.com/NixOS/nixos-hardware#using-nix-flakes-support
-
 - simple flakes development environment
   - https://github.com/payasrelekar/resume/blob/master/flake.nix
   - https://github.com/nrdxp/nixflk/blob/template/shell.nix
