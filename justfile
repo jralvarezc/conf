@@ -15,7 +15,7 @@ clean max-age="30":
 
 format:
   @echo "[INFO]: Formating all nix files..."
-  find . -iname '*.nix' -exec nixfmt -w 79 {} \;
+  find . -iname '*.nix' -exec nixpkgs-fmt {} \;
 
 lint:
   @echo "[INFO]: Linting all nix files..."
@@ -44,10 +44,10 @@ lint:
     -W UnneededAntiquote \
     -r .
 
-search pkg="mutt":
+search pkg:
   @echo "[INFO] Searching package {{pkg}}..."
   nix search nixpkgs '\.{{pkg}}$'
 
-run pkg="mutt":
+run pkg:
   @echo "[INFO] Running package {{pkg}}..."
   nix run nixpkgs#{{pkg}}
