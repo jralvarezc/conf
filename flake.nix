@@ -1,6 +1,6 @@
 {
 
-  description = "NixOS configuration";
+  description = "NixOS configuration using Flakes and Home-Manager";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -10,25 +10,27 @@
     };
   };
 
-  outputs = { self, ... }@inputs: {
-    nixosConfigurations = {
-      auto = inputs.nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+  outputs = inputs@{ self, nixpkgs, home-manager }:
+    let
+      system = "x86_64-linux";
+      pkgs = nixpkgs.legacyPackages."${system}";
+    in
+    {
+
+      nixosConfigurations.auto = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
+        system = system;
         modules = [
-          ./os
-          inputs.home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.verbose = true;
-            home-manager.users.ralvarez = import ./home;
-          }
+          ./hosts/auto
+          ./users/ralvarez
+          ./hardware/x1c6
+          # external
+          home-manager.nixosModules.home-manager
         ];
-
       };
-    };
 
-  };
+      devShell."${system}" = import ./shell.nix { inherit pkgs; };
+
+    };
 
 }
