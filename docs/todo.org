@@ -1,10 +1,32 @@
+
+- change keyboard function keys to FX by default
+
+- minimal code
+  wallpapers?
+  neofetch
+
+- stateless and secure
+  shutdown that, before poweroff or reboot:
+  remove stuff
+  backup
+  then poweroff/remove
+  zfs snapshots or just rm -rf
+
 - from sops to nix-sop or simpler: agenix
+
+- simple flakes development environment
+  https://github.com/payasrelekar/resume/blob/master/flake.nix
 
 - nixos template with flakes https://github.com/bqv/nixrc
   https://github.com/nrdxp/nixflk/
   https://github.com/colemickens/nixos-flake-example
 
 - split hosts and users in different dirs
+  https://github.com/ebbertd/nixos-configuration/blob/develop/flake.nix
+  https://github.com/search?p=2&q=filename%3Aflake.nix+hosts+users&type=Code
+  https://github.com/rafiyqw/my-flake/blob/master/flake.nix
+  https://github.com/luc65r/nixconf/blob/master/flake.nix
+  https://github.com/jamesottaway/dotfiles/blob/master/flake.nix
   https://github.com/bqv/nixrc/tree/master/hosts
   https://github.com/bqv/nixrc/tree/master/users
 
@@ -111,39 +133,6 @@
 
   - https://www.reddit.com/r/NixOS/comments/8tkllx/standard_project_structure/
 
-- nixos without using channels (and nixpath)
-
-  - https://github.com/anderspapitto/nixos-configuration/
-  - https://github.com/anderspapitto/nixos-configuration/blob/master/nix.nix#L12
-  - https://www.reddit.com/r/NixOS/comments/7p83y4/install_a_package_from_unstable_while_running/
-  - https://nixos.wiki/wiki/How_to_fetch_Nixpkgs_with_an_empty_NIX_PATH
-  - https://github.com/NixOS/nixpkgs/issues/27994
-  - https://www.reddit.com/r/NixOS/comments/deorkq/pinning_nixpkgs_by_sha/
-  - https://github.com/colemickens/nixcfg
-  - https://news.ycombinator.com/item?id=20486462
-
-#+begin_example
-  ralvarez@auto  ~/conf  rg "<nix" .
-  ./os/hardware/x1c6.nix
-  8:    [ <nixpkgs/nixos/modules/installer/scan/not-detected.nix>
-
-  ./home/wrappers/restic-b2.nix
-  1:with import <nixpkgs> {};
-
-  ./home/packages/tresorit/default.nix
-  3:with import <nixpkgs> {};
-
-  ./home/packages/tresorit/release.nix
-  1:with import <nixpkgs> {};
-   ralvarez@auto  ~/conf  nix-channel --list
-   ralvarez@auto  ~/conf  sudo nix-channel --list
-
-  home-manager https://github.com/rycee/home-manager/archive/master.tar.gz
-  nixos https://nixos.org/channels/nixos-unstable
-   ralvarez@auto  ~/conf  echo $NIX_PATH
-  /home/ralvarez/.nix-defexpr/channels:nixpkgs=/nix/var/nix/profiles/per-user/root/channels/nixos:nixos-config=/etc/nixos/configuration.nix:/nix/var/nix/profiles/per-user/root/channels
-#+end_example
-
 - notify via dunst where backup is not possible to run because of
   ggpagent is not open
 
@@ -177,27 +166,6 @@
 - how to create wrappers
 
   - https://github.com/leosbotelho/cartons/tree/17a800c848ffc493ca6cbdfd3917fb9fdc673eb1/pkgs/wrappers
-
-- protonvpn now has killswitch support for linux? yes, but it works?
-  lets test it a little bit more
-
-  - and nixify configuration to fire it up on boot
-
-  #+begin_example
-    ralvarez@auto  ~  sudo protonvpn s
-    Status:       Connected
-    Time:         0:12:27
-    IP:           37.120.215.249
-    Server:       US-FL#7
-    Features:     Normal
-    Protocol:     TCP
-    Kill Switch:  Enabled
-    Country:      United States
-    City:         Miami
-    Load:         47%
-    Received:     23.3 MB
-    Sent:         814.16 KB
-  #+end_example
 
 - wrappers?
 
@@ -262,9 +230,6 @@
 
 - auto-saves emacs
 
-  - Auto-saving biva.txt: Opening output file: No such file or
-    directory, /home/ralvarez/.emacs.d/auto-saves/#
-
 - EDITOR=emacs
 
 - emacs as a user service in home-manager
@@ -273,7 +238,7 @@
 
   - https://github.com/BrianHicks/dotfiles.nix/blob/master/dotfiles/emacs.nix
 
-- mkdir /home/ralvarez/.emacs.d/auto-saves (nixify)
+- mkdir ~/.emacs.d/auto-saves (nixify)
 
 - move to home-manager install as user by code
 
