@@ -14,10 +14,10 @@
     ../../profiles/fonts.nix
     ../../profiles/xserver.nix
     ../../profiles/home.nix
-    ../../profiles/wm/i3
+    ../../profiles/wm/i3.nix
     #    ./profiles/wm/xmonad
     ../../profiles/sound.nix
-    ../../modules/vpn/mullvad
+    ../../modules/vpn.nix
   ];
 
   system = {

@@ -5,17 +5,17 @@
   imports = [
     ./packages.nix
     ./services/restic
-    ./services/dunst
-    ./services/gpg
+    ./services/dunst.nix
+    ./services/gpg.nix
     ./programs/i3
-    ./programs/zsh
+    ./programs/zsh.nix
     ./programs/git
     ./programs/gpg
-    ./programs/direnv
-    ./programs/broot
+    ./programs/direnv.nix
+    ./programs/broot.nix
     ./programs/emacs
     ./programs/kitty
-    ./programs/chromium
+    ./programs/chromium.nix
     #./programs/tresorit
   ];
 

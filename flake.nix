@@ -21,9 +21,9 @@
         specialArgs = { inherit inputs; };
         system = system;
         modules = [
-          ./hosts/auto
+          ./hosts/auto.nix
           ./users/ralvarez
-          ./hardware/x1c6
+          ./hardware/x1c6.nix
           # external
           home-manager.nixosModules.home-manager
         ];
