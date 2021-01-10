@@ -7,6 +7,8 @@
     package = pkgs.nixFlakes;
     extraOptions = ''
       experimental-features = nix-command flakes ca-references
+      keep-outputs = true
+      keep-derivations = true
     '';
     registry.nixpkgs.flake = inputs.nixpkgs;
 
