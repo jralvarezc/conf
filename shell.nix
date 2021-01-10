@@ -8,7 +8,7 @@ mkShell {
     git
     just
     nixpkgs-fmt
-    nix-linter
+    #nix-linter
     manix
     nix-tree
     tokei
