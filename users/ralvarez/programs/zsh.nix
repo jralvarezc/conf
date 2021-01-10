@@ -23,6 +23,7 @@
       bindkey '^R' history-incremental-search-backward
       source ${pkgs.nix-index}/etc/profile.d/command-not-found.sh
       eval "$(zoxide init zsh)"
+      eval "$(direnv hook zsh)"
     '';
 
     shellAliases = {
