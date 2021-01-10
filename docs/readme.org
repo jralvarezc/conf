@@ -22,13 +22,19 @@ and time in the long run." Jacek Generowicz
      $ nix develop
    #+end_example
 
-3. Update, rebuild and switch
+3. Build OS
+
+   #+begin_example
+     $ just build
+   #+end_example
+
+3. Update upstream inputs
 
    #+begin_example
      $ just update
    #+end_example
 
-4. Format, lint, clean, search, run and more:
+4. Format, lint, size, clean, search, run and more:
 
    #+begin_example
      $ just
