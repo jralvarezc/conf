@@ -1,17 +1,18 @@
 
+- mullvad vpn is rewriting /etc/resolv.conf
+
 - change keyboard function keys to FX by default
 
 - stateless and secure
-  shutdown that, before poweroff or reboot:
-  remove stuff
-  backup
-  then poweroff/remove
-  zfs snapshots or just rm -rf
+  - shutdown that, before poweroff or reboot:
+  - remove stuff
+  - backup
+  - then poweroff/remove
+  - zfs snapshots or just rm -rf
+  - https://elis.nu/blog/2020/05/nixos-tmpfs-as-root/
+  - https://elis.nu/blog/2020/06/nixos-tmpfs-as-home/
 
 - ssh identity for github is declarative? sops? age?
-
-- stubby dns however mullvad includes a non logging dns server when
-  - there is no vpn? killswitch?
 
 - mouse bluetooth as code according to identifiers
 
@@ -29,6 +30,10 @@
 
 - security cpu mitigations
   - https://github.com/nrdxp/nixflk/blob/template/modules/security/mitigations.nix
+  # https://www.kernel.org/doc/html/latest/admin-guide/kernel-parameters.html
+  # https://kernsec.org/wiki/index.php/Kernel_Self_Protection_Project/Recommended_Settings
+  #boot.kernelParams = [ "nosmt" ];
+  # kernel mitigations means security vs performance tradeoff
 
 - ssh-agent start nixified
   - https://github.com/epage/nixos-config/blob/8fca7aab30e01ab92c8267eb17516bb123b222fe/profiles/security.nix
