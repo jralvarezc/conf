@@ -22,6 +22,7 @@
       sops -d conf/users/ralvarez/muna.yml > /dev/null 2>&1
       bindkey '^R' history-incremental-search-backward
       source ${pkgs.nix-index}/etc/profile.d/command-not-found.sh
+      eval "$(zoxide init zsh)"
     '';
 
     shellAliases = {

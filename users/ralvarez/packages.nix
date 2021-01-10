@@ -23,6 +23,7 @@ in
     pcre
     most
     fzf
+    zoxide
 
     # compress
     zip
