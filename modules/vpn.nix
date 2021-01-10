@@ -26,10 +26,8 @@ with lib; {
     # https://github.com/NixOS/nixpkgs/issues/91923
     networking.iproute2.enable = true;
 
-    # mullvad non-logging dns, and mkForce to avoid concat with defaults
-    networking.nameservers = pkgs.lib.mkForce [
-      "193.138.218.74"
-    ];
+    # https://github.com/mullvad/mullvadvpn-app/issues/473
+    # networking.nameservers = pkgs.lib.mkForce [ "127.0.0.1" ];
 
     systemd.services.mullvad-daemon = {
       description = "Mullvad VPN daemon";
