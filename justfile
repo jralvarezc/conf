@@ -4,8 +4,11 @@
 all: format update clean
 
 update:
-  @echo "[INFO] Updating flake and rebuilding OS..."
-  nix flake update --recreate-lock-file
+  @echo "[INFO] Updating flake..."
+  #nix flake update --recreate-lock-file
+
+build:
+  @echo "[INFO] Rebuilding NixOS..."
   sudo nixos-rebuild --flake .#auto switch
 
 clean max-age="30":
