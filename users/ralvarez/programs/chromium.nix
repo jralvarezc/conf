@@ -8,6 +8,7 @@
     "ioalpmibngobedobkmbhgmadaphocjdn" # onelogin
     "niloccemoadcdkdjlinkgdfekeahmflj" # pocket
     "niepjjjfafhadmfdminbckmciijcaagc" # trimless
+    "dbepggeogbaibhgnhhndojpepiihcmeb" # vimium
   ];
 
 }

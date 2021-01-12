@@ -10,7 +10,7 @@
         invocation = "edit";
         key = "enter";
         shortcut = "e";
-        execution = "$EDITOR {file}";
+        execution = "kak {file}";
         leave_broot = false;
       }
       {

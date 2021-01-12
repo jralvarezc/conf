@@ -16,6 +16,7 @@ in
     lf
     nnn
     fd
+    sd
     bat
     ripgrep
     exa
@@ -24,6 +25,7 @@ in
     most
     fzf
     zoxide
+    fasd
 
     # compress
     zip
@@ -37,9 +39,12 @@ in
     aspell
     aspellDicts.es
     aspellDicts.en
+    kakoune
+    mdp
 
     # devel
     git
+    hyperfine
 
     # crypto
     mkpasswd
@@ -55,6 +60,7 @@ in
     # network
     netcat-gnu
     nmap
+    httpie
 
     # browser
     chromium
