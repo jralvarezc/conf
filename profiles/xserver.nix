@@ -13,18 +13,9 @@
     displayManager.autoLogin.enable = true;
   };
 
-  fonts = {
-    fonts = [
-      pkgs.google-fonts
-    ];
-    fontconfig.dpi = 135; # 135?
-  };
-
   environment.systemPackages = with pkgs; [
     kitty
     libnotify
-    font-manager
-    powerline-fonts
   ];
 
 }

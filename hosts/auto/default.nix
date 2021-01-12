@@ -29,6 +29,7 @@
     ../../profiles/console.nix
     ../../profiles/fonts.nix
     ../../profiles/xserver.nix
+    ../../profiles/xfonts.nix
     ../../profiles/home.nix
     ../../profiles/wm/i3.nix
     #    ./profiles/wm/xmonad
