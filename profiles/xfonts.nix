@@ -7,6 +7,11 @@
       (nerdfonts.override {
         fonts = [
           "Hack"
+          "Iosevka"
+          "Terminus"
+          "Overpass"
+          "JetBrainsMono"
+          "SourceCodePro" # provides SauceCodePro
         ];
       })
     ];
@@ -18,8 +23,8 @@
       antialias = true;
       defaultFonts = {
         monospace = [ "Hack" ];
-        sansSerif = [ "Roboto" ];
-        serif = [ "Roboto Slab" ];
+        sansSerif = [ "Iosevka" ];
+        serif = [ "Iosevka" ];
       };
     };
   };
@@ -30,6 +35,6 @@
   ];
 
   # list installed fonts
-  # $ fc-list | cut -f2 -d: | sort -u  | less
+  # $ fc-list | cut -f2 -d: | sort -u  | grep Nerd
 
 }
