@@ -26,6 +26,7 @@ in
     fzf
     zoxide
     fasd
+    tldr
 
     # compress
     zip
