@@ -4,7 +4,6 @@
 
   security = {
     auditd.enable = true;
-    hideProcessInformation = true;
     sudo.wheelNeedsPassword = false;
   };
 

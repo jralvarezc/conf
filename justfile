@@ -5,7 +5,7 @@ all: format update clean
 
 update:
   @echo "[INFO] Updating flake..."
-  #nix flake update --recreate-lock-file
+  nix flake update
 
 build:
   @echo "[INFO] Rebuilding NixOS..."
