@@ -1,4 +1,7 @@
 
+- simplify backups?
+  - https://github.com/DerDoni/nix-config/blob/main/base.nix#L44
+
 - mullvad vpn is rewriting /etc/resolv.conf
 
 - change keyboard function keys to FX by default
