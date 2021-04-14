@@ -16,7 +16,7 @@ with lib; {
     ];
 
     boot.extraModulePackages = [
-      config.boot.kernelPackages.wireguard
+#      config.boot.kernelPackages.wireguard
     ];
 
     boot.kernelModules = [
