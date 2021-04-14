@@ -11,6 +11,9 @@ in
     wget
     magic-wormhole
 
+    # packages
+    dpkg
+
     # files
     tree
     lf
