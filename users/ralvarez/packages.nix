@@ -11,6 +11,9 @@ in
     wget
     magic-wormhole
 
+    # debug
+    gdb
+
     # packages
     dpkg
 
