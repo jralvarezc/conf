@@ -61,6 +61,8 @@
     };
   };
 
+  # $ resolvectl status
+
   # dnsmasq is not needed because dnscrypt-proxy is able to do caching
 
   # DNS tests URLs
