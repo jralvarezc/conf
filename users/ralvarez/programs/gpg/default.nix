@@ -3,6 +3,6 @@
 {
 
   programs.gpg.enable = true;
-  home.file.".gnupg/gpg.conf".source = ./gpg.conf;
+#  home.file.".gnupg/gpg.conf".source = ./gpg.conf;
 
 }
