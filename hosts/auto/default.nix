@@ -29,6 +29,7 @@
     ../../profiles/services.nix
     ../../profiles/dns.nix
     ../../profiles/console.nix
+    ../../profiles/packages.nix
     ../../profiles/fonts.nix
     ../../profiles/xserver.nix
     ../../profiles/xfonts.nix
