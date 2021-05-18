@@ -25,6 +25,7 @@
     ../../profiles/security.nix
     ../../profiles/power.nix
     ../../profiles/network.nix
+    ../../profiles/vpn.nix
     ../../profiles/dns.nix
     ../../profiles/console.nix
     ../../profiles/fonts.nix
@@ -34,7 +35,6 @@
     ../../profiles/wm/i3.nix
     #    ./profiles/wm/xmonad
     ../../profiles/sound.nix
-    ../../modules/vpn.nix
   ];
 
 }
