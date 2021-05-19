@@ -5,17 +5,23 @@
   # harden dns queries, independent of vpn status and type of dns
 
   networking = {
-    networkmanager.dns = "none";
     resolvconf.useLocalResolver = true;
+    nameservers = [ "127.0.0.1" "::1" ];
+
+    # if using nm disable dns change
+    networkmanager.dns = "none";
+    # if using dhcp disable dns change
+    dhcpcd.extraConfig = "nohook resolv.conf";
   };
 
-  # https://github.com/kitten/nix-system/blob/master/config/dns.nix
+  # disable systemd resolved to force use of dnscrypt
+  services.resolved.enable = false;
 
   services.dnscrypt-proxy2 = {
     enable = true;
     settings = {
 
-      #listen_addresses = [ "127.0.0.1:53" ];
+      listen_addresses = [ "127.0.0.1:53" ];
 
       ipv6_servers = true;
       dnscrypt_servers = true;
@@ -51,17 +57,12 @@
         };
       };
 
-      # TODO: anonymized_dns
-      # https://github.com/walseb/NixOSConfig/blob/master/system-modules/network/dns.nix#L55
-
       # if everything else fails, ignore system and then cloudflare
       ignore_system_dns = true;
       fallback_resolvers = [ "1.1.1.1:53" ];
 
     };
   };
-
-  # $ resolvectl status
 
   # dnsmasq is not needed because dnscrypt-proxy is able to do caching
 
