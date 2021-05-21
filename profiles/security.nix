@@ -4,7 +4,17 @@
 
   security = {
     auditd.enable = true;
-    sudo.wheelNeedsPassword = false;
+  };
+
+  # Enable doas instead of sudo
+  security.sudo.enable = false;
+  security.doas = {
+    enable = true;
+    extraRules = [{
+      groups = [ "wheel" ];
+      noPass = true;
+	    keepEnv = true;
+    }];
   };
 
 }

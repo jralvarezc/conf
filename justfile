@@ -9,14 +9,14 @@ update:
 
 build:
   @echo "[INFO] Rebuilding NixOS..."
-  sudo nixos-rebuild --flake .#auto switch
+  doas nixos-rebuild --flake .#auto switch
 
 clean max-age="30":
   @echo "[INFO] Deleting user and system garbage..."
   nix profile list | awk '{print $NF}' | xargs nix profile remove
-  sudo nix profile list | awk '{print $NF}' | sudo xargs nix profile remove
+  doas nix profile list | awk '{print $NF}' | doas xargs nix profile remove
   nix-collect-garbage --delete-older-than {{max-age}}d
-  sudo nix-collect-garbage --delete-older-than {{max-age}}d
+  doas nix-collect-garbage --delete-older-than {{max-age}}d
   git gc --aggressive
 
 size:

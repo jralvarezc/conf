@@ -20,6 +20,7 @@
     acpi
     nano
     vim
+    git
   ];
 
   programs = {

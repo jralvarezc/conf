@@ -95,13 +95,13 @@
 - brightness not working
   #+begin_example
     #Screen brightness controls Thinkpad X1 Yoga
-    # sudo apt-get install xbacklight
+    # doas apt-get install xbacklight
     bindsym XF86MonBrightnessUp exec xbacklight -inc 25
     bindsym XF86MonBrightnessDown exec xbacklight -dec 25
 
     working
-    $ sudo tee /sys/class/backlight/intel_backlight/brightness <<< 300
-    $ sudo tee /sys/class/backlight/intel_backlight/brightness <<< 1000
+    $ doas tee /sys/class/backlight/intel_backlight/brightness <<< 300
+    $ doas tee /sys/class/backlight/intel_backlight/brightness <<< 1000
   #+end_example
 
 - organize configuration as modules

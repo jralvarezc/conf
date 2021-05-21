@@ -61,7 +61,6 @@
       plugins = [
         "git"
         "pip"
-        "sudo"
         "fasd"
       ];
     };

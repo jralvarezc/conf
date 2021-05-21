@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
-  # $ sudo systemctl restart wg-quick-mullvad
+  # $ doas systemctl restart wg-quick-mullvad
   networking.wg-quick.interfaces.mullvad = {
     address = [ "10.64.184.7/32" "fc00:bbbb:bbbb:bb01::1:b806/128" ];
     # dns parameter must be commented to combine vpn with dnscrypt
