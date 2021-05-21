@@ -4,6 +4,8 @@
 
   environment.systemPackages = with pkgs; [
     pciutils
+    lshw
+    inxi
     htop
     ltrace
     file
