@@ -57,7 +57,7 @@ in
     mkpasswd
     pwgen
     age
-    sequoia
+    #sequoia
     keybase
     kbfs
     keybase-gui
