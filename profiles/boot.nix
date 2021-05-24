@@ -27,4 +27,7 @@
     "/keyfile.bin" = "/etc/secrets/initrd/keyfile.bin";
   };
 
+  boot.initrd.supportedFilesystems = ["zfs"]; # boot from zfs
+  boot.supportedFilesystems = [ "zfs" ];
+  networking.hostId = "25de0137"; # $ head -c 8 /etc/machine-id
 }
