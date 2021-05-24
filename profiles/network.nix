@@ -33,6 +33,7 @@
     };
   };
 
+  # not working
   programs.captive-browser = {
     enable = true;
     interface = "wlan0";
