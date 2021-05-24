@@ -1,6 +1,12 @@
 
-- simplify backups?
-  - https://github.com/DerDoni/nix-config/blob/main/base.nix#L44
+- usb nixos system on a stick
+  https://github.com/tfc/nixos-offline-installer
+  https://discourse.nixos.org/t/nixos-automatic-unattended-offline-installer-usb-stick/6114
+  https://github.com/snabblab/snabblab-nixos/blob/master/make-iso.nix
+  https://github.com/LEXUGE/nixos
+
+- custom installer cd/iso with script for erase your darlings (zfs and impermanence)
+  https://github.com/sevanspowell/personal-network/tree/master/deployments/eyd-test/bootstrap
 
 - change keyboard function keys to FX by default
 
@@ -13,11 +19,9 @@
   - https://elis.nu/blog/2020/05/nixos-tmpfs-as-root/
   - https://elis.nu/blog/2020/06/nixos-tmpfs-as-home/
 
-- ssh identity for github is declarative? sops? age?
+- ssh identity for github is declarative? sops? age? agenix?
 
 - mouse bluetooth as code according to identifiers
-
-- wifi with differed backend
 
 - workflow test same OS conf via iso with qemu
   - https://github.com/nix-community/nixos-generators
@@ -42,7 +46,7 @@
   - https://github.com/moredhel/nur-packages/blob/4a49021b91973cd4ee41127fe42de3f96f609069/home-manager/modules/crostini/core.nix
   - https://github.com/moredhel/nur-packages/blob/4a49021b91973cd4ee41127fe42de3f96f609069/home-manager/modules/home/default.nix
 
-- from sops to nix-sop or simpler: agenix
+- from sops to nix-sops or simpler: agenix
   - https://github.com/Mic92/sops-nix
   - https://github.com/search?q=filename%3Aflake.nix+sops-nix.url&type=code
 
