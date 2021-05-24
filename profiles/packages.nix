@@ -9,6 +9,7 @@
     htop
     ltrace
     file
+    tree
     patchelf
     which
     psmisc
@@ -23,6 +24,11 @@
     nano
     vim
     git
+    parted
+    gptfdisk
+    lsof
+    qemu
+    beep
   ];
 
   programs = {
