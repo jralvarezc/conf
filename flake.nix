@@ -3,6 +3,7 @@
   description = "NixOS configuration using Flakes and Home-Manager";
 
   inputs = {
+    #nixpkgs.url = "github:nixos/nixpkgs/nixos-21.05";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     home-manager = {
