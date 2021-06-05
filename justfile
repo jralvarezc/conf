@@ -19,6 +19,10 @@ clean max-age="30":
   doas nix-collect-garbage --delete-older-than {{max-age}}d
   git gc --aggressive
 
+check:
+  @echo "[INFO] Checking store..."
+  doas nix-store --verify --check-contents
+
 size:
   @echo "[INFO] Calculating size..."
   du . -sh --exclude=.git
