@@ -1,4 +1,7 @@
 
+- everything as modules
+  https://github.com/buffet/tararice/tree/master/modules
+
 - as code partitioning with erase my darlings FDE luks and zfs
   https://gist.github.com/ixmatus/7dcd56c8e878e8d98ee6d266f7949d11
   https://gist.github.com/jralvarezc/e91b7b512691128c89784a6569c7f85b
