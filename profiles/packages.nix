@@ -16,19 +16,17 @@
     traceroute
     bind
     binutils
-    vim
-    neovim # tools
     nix-index
     evtest
     acpi
-    nano
-    vim
+    kakoune
     git
     parted
     gptfdisk
     lsof
     qemu
     beep
+    just
   ];
 
   programs = {

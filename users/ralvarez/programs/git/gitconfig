@@ -6,7 +6,7 @@
 [push]
 	default = matching
 [core]
-	editor = vi
+	editor = kak
 [commit]
 [credential]
 	helper = cache --timeout=3600

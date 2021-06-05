@@ -9,7 +9,7 @@
     ./programs/zsh.nix
     ./programs/git
     ./programs/gpg
-    ./programs/emacs
+    #./programs/emacs
     ./programs/kitty
     ./programs/chromium.nix
     ../profiles/direnv.nix

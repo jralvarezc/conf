@@ -41,7 +41,6 @@ in
 
     # edit
     pandoc
-    emacs-nox
     diction
     aspell
     aspellDicts.es
