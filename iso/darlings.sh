@@ -200,6 +200,8 @@ cat <<EOF > /mnt/persist/etc/nixos/configuration.nix
       "/nix/var/nix/profiles/per-user/root/channels"
     ];
 
+  hardware.video.hidpi.enable = lib.mkForce true;
+
   # Use grub and legacy bootloader
   boot.loader.grub.enable = true;
   boot.loader.grub.version = 2;
