@@ -74,6 +74,7 @@ in
     firefox
     links
     lynx
+    elinks
 
     # calc
     eva
