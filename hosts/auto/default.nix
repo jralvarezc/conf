@@ -23,6 +23,7 @@
     ../../profiles/boot.nix
     ../../profiles/nix.nix
     ../../profiles/nixpkgs.nix
+    ../../profiles/direnv.nix
     ../../profiles/locale.nix
     ../../profiles/security.nix
     ../../profiles/power.nix
