@@ -18,7 +18,6 @@
 
     fontconfig = {
       enable = true;
-      dpi = 135;
       hinting.enable = true;
       antialias = true;
       defaultFonts = {
