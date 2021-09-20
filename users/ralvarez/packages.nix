@@ -76,6 +76,10 @@ in
     lynx
     elinks
 
+    # mail
+    mutt
+    hydroxide
+
     # calc
     eva
 
