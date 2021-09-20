@@ -28,7 +28,7 @@
     ../../profiles/security.nix
     ../../profiles/power.nix
     ../../profiles/network.nix
-    ../../profiles/vpn.nix
+    #../../profiles/vpn.nix
     ../../profiles/services.nix
     ../../profiles/dns.nix
     ../../profiles/console.nix
