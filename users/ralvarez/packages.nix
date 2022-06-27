@@ -100,7 +100,6 @@ in
     graphviz
 
     # media
-    mplayer
     vorbis-tools
     ffmpeg
 
