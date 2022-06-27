@@ -6,7 +6,7 @@
     # flake support
     package = pkgs.nixFlakes;
     extraOptions = ''
-      experimental-features = nix-command flakes ca-references
+      experimental-features = nix-command flakes
       keep-outputs = true
       keep-derivations = true
     '';
@@ -16,20 +16,20 @@
       "nixpkgs=${inputs.nixpkgs}"
     ];
 
-    maxJobs = lib.mkDefault 8;
-
-    useSandbox = true;
+    settings = {
+      sandbox = true;
+      max-jobs = lib.mkDefault 8;
+      auto-optimise-store = true;
+      trusted-users = [
+        "root"
+      ];
+    };
 
     gc = {
       automatic = true;
       dates = "weekly";
     };
 
-    autoOptimiseStore = true;
-
-    trustedUsers = [
-      "root"
-    ];
   };
 
 }

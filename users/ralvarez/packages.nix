@@ -72,7 +72,7 @@ in
     chromium
     brave
     firefox
-    links
+    links2
     lynx
     elinks
 

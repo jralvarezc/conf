@@ -22,7 +22,7 @@ in
     # Don't forget to set a password with ‘passwd’.
   };
 
-  nix.trustedUsers = [ login ];
+  nix.settings.trusted-users = [ login ];
 
   services.xserver.displayManager.autoLogin.user = login;
 
