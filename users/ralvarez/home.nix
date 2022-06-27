@@ -2,6 +2,8 @@
 
 {
 
+  home.stateVersion = "18.09";
+
   imports = [
     ./packages.nix
     ./services/restic
@@ -20,8 +22,6 @@
     PAGER = "less -R";
     SOPS_PGP_FP = "CED96DF463D7B86A1C4B1322BE6C92145BFF4A34";
   };
-
-  home.stateVersion = "18.09";
 
   xdg.configFile."user-dirs.dirs".text = ''
     XDG_DESKTOP_DIR="$HOME/xdg/desktop"

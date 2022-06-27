@@ -25,6 +25,7 @@
         modules = [
           ./hosts/auto
           ./users/ralvarez
+          ./users/root
           ./hardware/x1c6
           # external
           home-manager.nixosModules.home-manager
