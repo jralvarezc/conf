@@ -49,10 +49,6 @@
                          --exclude=.cache \
                          --one-file-system \
                          --verbose'';
-      shutdown = "echo Use: systemctl poweroff";
-      reboot = "echo Use: systemctl reboot";
-      nano = "echo Use: emacs";
-      vi = "echo Use: emacs";
     };
 
     oh-my-zsh = {
