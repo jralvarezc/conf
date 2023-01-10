@@ -10,11 +10,13 @@
   };
 
   # using nixos module, home-manager seems with race conditions.
+  # /nix/backup will be backed up, /nix/persist no (just reboots)
   environment.persistence."/nix/backup".users.ralvarez = {
     directories = [
       "conf"
       "data"
       "git"
+      ".ssh"
       ".gnupg"
 #      ".thunderbird"
       ".config/fontconfig"

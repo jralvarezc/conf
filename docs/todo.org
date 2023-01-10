@@ -1,5 +1,5 @@
 -
-- tmpfs
+- impermanence on home / tmpfs DONE - root / PENDING
   https://github.com/search?q=extension%3Anix+tmpfs++home.persistence&type=Code
   https://github.com/balsoft/nixos-config/blob/f8aea9ffb395373e757a13fdfd5d11afc043a1df/modules/persist.nix
   https://github.com/znewman01/dotfiles/blob/98366c4aab71385c328ab28a3bbaabb3377e4bf0/persist/system.nix
