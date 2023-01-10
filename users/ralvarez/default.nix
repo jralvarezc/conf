@@ -29,8 +29,8 @@ in
 
   nix.settings.trusted-users = [ login ];
 
-  services.xserver.displayManager.autoLogin.user = login;
-
+  services.gnome.gnome-keyring.enable = true;
+  
   # home-manager configuration for user
   home-manager.users."${login}" = import ./home.nix;
 
