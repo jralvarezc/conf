@@ -3,7 +3,7 @@
 {
 
   xdg.configFile."i3/config".source = ./i3.conf;
-  xdg.configFile."i3status/config".source = ./i3status.conf;
+  xdg.configFile."i3/i3status.conf".source = ./i3status.conf;
 
   services.screen-locker = {
     enable = true;

@@ -1,8 +1,13 @@
-{ config, pkgs, ... }:
+{ inputs, config, pkgs, ... }:
 let
   login = "ralvarez";
 in
 {
+
+  imports = [
+    inputs.home-manager.nixosModules.home-manager
+    ./features/persist.nix
+  ];
 
   # nixos configuration for user
   users.extraUsers."${login}" = {

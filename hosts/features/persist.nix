@@ -6,13 +6,13 @@
     inputs.impermanence.nixosModules.impermanence
   ];  
 
-  environment.persistence."/persistent" = {
+  environment.persistence."/nix/persist" = {
+    hideMounts = false;
     directories = [ 
-      #"/var/lib/systemd" 
-      #"/var/log" 
+      "/var/lib/iwd"
+      "/var/lib/bluetooth"
     ];
     files = [
-      #"/etc/machine-id"
     ];
   };
 
