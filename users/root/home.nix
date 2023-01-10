@@ -5,7 +5,7 @@
   home.stateVersion = "18.09";
 
   imports = [
-    ./programs/git
+    ./features/git
   ];
 
 }

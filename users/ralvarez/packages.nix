@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 let
   inherit (pkgs) callPackage;
-  restic-b2 = pkgs.callPackage ./services/restic/restic-b2.nix { };
+  restic-b2 = pkgs.callPackage ./features/restic/restic-b2.nix { };
 in
 {
 

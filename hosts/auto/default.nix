@@ -20,26 +20,28 @@
   ];
 
   imports = [
-    ../profiles/boot.nix
-    ../profiles/nix.nix
-    ../profiles/nixpkgs.nix
-    ../profiles/direnv.nix
-    ../profiles/locale.nix
-    ../profiles/security.nix
-    ../profiles/power.nix
-    ../profiles/network.nix
-    #../profiles/vpn.nix
-    ../profiles/services.nix
-    ../profiles/dns.nix
-    ../profiles/console.nix
-    ../profiles/packages.nix
-    ../profiles/fonts.nix
-    ../profiles/xserver.nix
-    ../profiles/xfonts.nix
-    ../profiles/home.nix
-    ../profiles/wm/i3.nix
-    #../profiles/wm/xmonad
-    ../profiles/sound.nix
+    ../features/autologin.nix
+    ../features/boot.nix
+    ../features/persist.nix
+    ../features/nix.nix
+    ../features/nixpkgs.nix
+    ../features/direnv.nix
+    ../features/locale.nix
+    ../features/security.nix
+    ../features/power.nix
+    ../features/network.nix
+    #../features/vpn.nix
+    ../features/services.nix
+    ../features/dns.nix
+    ../features/console.nix
+    ../features/packages.nix
+    ../features/fonts.nix
+    ../features/xserver.nix
+    ../features/xfonts.nix
+    ../features/home.nix
+    ../features/wm/i3.nix
+    #../features/wm/xmonad
+    ../features/sound.nix
   ];
 
 }
