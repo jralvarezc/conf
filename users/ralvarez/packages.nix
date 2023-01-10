@@ -9,13 +9,13 @@ in
     # transfer
     restic-b2
     wget
-    magic-wormhole
 
     # debug
     gdb
 
     # packages
     dpkg
+    manix
 
     # files
     tree
@@ -33,6 +33,15 @@ in
     zoxide
     fasd
     tldr
+    rclone
+
+    # mail
+    mailspring
+    evolution
+    thunderbird
+    kmail
+    gnome.geary
+    sylpheed
 
     # compress
     zip
@@ -47,6 +56,7 @@ in
     aspellDicts.en
     kakoune
     mdp
+    abiword
 
     # devel
     git
@@ -56,7 +66,6 @@ in
     mkpasswd
     pwgen
     age
-    #sequoia
     keybase
     kbfs
     keybase-gui
@@ -66,7 +75,6 @@ in
     # network
     netcat-gnu
     nmap
-    httpie
 
     # browser
     chromium
@@ -93,7 +101,6 @@ in
     xorg.xbacklight
 
     # image
-    zathura
     maim
     xclip
     xorg.xev
