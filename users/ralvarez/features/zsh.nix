@@ -23,6 +23,13 @@
       source ${pkgs.nix-index}/etc/profile.d/command-not-found.sh
       eval "$(zoxide init zsh)"
       eval "$(direnv hook zsh)"
+
+      # load all functions
+      setopt NULL_GLOB
+      for f in ~/.config/zsh/functions/*; do
+        source $f
+      done
+      unsetopt NULL_GLOB
     '';
 
     shellAliases = {
