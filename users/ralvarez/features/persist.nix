@@ -19,6 +19,7 @@
       ".ssh"
       ".gnupg"
 #      ".thunderbird"
+      ".config/op"
       ".config/fontconfig"
       ".config/xrandr"
       ".config/chromium/Default"
