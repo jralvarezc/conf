@@ -28,7 +28,6 @@
       ".config/dunst"
     ];
     files = [
-      ".config/rclone/rclone.conf"    
     ];
   };
 

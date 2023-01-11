@@ -19,7 +19,8 @@
     ../features/gpg.nix
 
     # custom features
-    ./features/restic
+    ./features/restic.nix
+    ./features/rclone.nix
     ./features/zsh.nix
     ./features/git
 

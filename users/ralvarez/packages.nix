@@ -1,13 +1,8 @@
 { config, lib, pkgs, ... }:
-let
-  inherit (pkgs) callPackage;
-  restic-b2 = pkgs.callPackage ./features/restic/restic-b2.nix { };
-in
 {
 
   home.packages = with pkgs; [
     # transfer
-    restic-b2
     wget
 
     # debug
@@ -33,7 +28,6 @@ in
     zoxide
     fasd
     tldr
-    rclone
 
     # mail
     mailspring
@@ -69,8 +63,6 @@ in
     keybase
     kbfs
     keybase-gui
-    _1password
-    sops
 
     # network
     netcat-gnu

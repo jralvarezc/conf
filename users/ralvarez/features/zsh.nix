@@ -19,7 +19,7 @@
     };
 
     initExtra = ''
-      sops -d conf/users/ralvarez/muna.yml > /dev/null 2>&1
+#      eval $(op signin)
       bindkey '^R' history-incremental-search-backward
       source ${pkgs.nix-index}/etc/profile.d/command-not-found.sh
       eval "$(zoxide init zsh)"
@@ -36,19 +36,6 @@
       more = "bat";
       rg = "rg --color=always";
       jq = "jq -C";
-      prune = ''
-        restic-b2 forget --prune \
-                         --keep-last 1 \
-                         --keep-within 24h \
-                         --keep-daily 7 \
-                         --keep-weekly 12 \
-                         --keep-monthly 36 \
-                         --keep-yearly 15'';
-      backup = ''
-        restic-b2 backup ~ \
-                         --exclude=.cache \
-                         --one-file-system \
-                         --verbose'';
     };
 
     oh-my-zsh = {
