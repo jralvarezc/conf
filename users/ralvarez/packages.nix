@@ -110,10 +110,6 @@
     vym
     xmind
 
-    # for jekyll (TODO: move to dev-env)
-    #bundler zlib bundix
-    #opencv openssl xorg.libXmu stdenv.cc # timedoctor
-
   ];
 
 }
