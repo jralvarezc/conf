@@ -51,24 +51,23 @@ and time in the long run." Jacek Generowicz
 
 2.  Minimal attack surface (less apps, simpler apps, minimal customization)
 
-    - currently: i3+kitty+restic
+    - currently: i3+kitty+restic+kak
 
     #+begin_example
     $ just size
     [INFO] Calculating size...
     du . -sh --exclude=.git
-    328K	.
+    416K	.
     tokei . -s code
     ===============================================================================
     Language            Files        Lines         Code     Comments       Blanks
     ===============================================================================
-    Nix                    38         1059          783           92          184
-    Org                     2          331          233            1           97
-    YAML                    1           31           30            0            1
+    Nix                    45         1112          832           60          220
+    Org                     2          357          254            4           99
     Haskell                 1            7            5            1            1
     ===============================================================================
-    Total                  42         1428         1051           94          283
-    ===============================================================================
+    Total                  48         1476         1091           65          320
+    ================================================================================
     #+end_example
 
 3.  Reproducible setup (pinned versions, one step build)
@@ -80,22 +79,25 @@ and time in the long run." Jacek Generowicz
 4.  Safe defaults (rm -i, vpn, encrypted disk and swap, autolock, frecuent and
     automatic dedup write-only backup)
 
-    - current backup: restic (dedup), tresorit (filesync with mobile)
+    - current backup: restic (dedup backup with snapshots on time),
+    - current sync: rclone (accesible via backblaze mobile app)
     - current storage: backblaze (not write-only), will be solved with wasabi
     - current vpn: mullvad (multihop + socks5 + killswitch), proton too slow
     - current browser: chromium+plugins, brave not working with plugins
 
-5.  Secrets as code (versioned, encrypted at rest)
+5.  Secrets on remote vault
 
-    - currently: gnupg+sops+yaml_keys
+    - currently: 1password CLI with enviroment substitution
+    - sops: never store the secrets
     - gitcrypt: not encrypted at rest in clonned repo
     - pass: several files and complex git workflow
     - pass+tomb: more tools and same results with sops
 
 6.  Declarative and avoid of imperative configuration
 
-    - currently: some nix-env installations are used -TODO-
-    - future: always destroyed nix-env generations
+    - currently: home over tmpfs
+    - future: pending root (/) over blank zfs/brtfs
+    - future: install as code 
 
 7.  Functional programming
 
@@ -103,22 +105,12 @@ and time in the long run." Jacek Generowicz
 
 8.  Easy to use (sexy security)
 
-    - currently: grub password but not at login, long timeouts for gpg-agent
+    - currently: only grub password, then autologin (only one user) 
 
 9.  Separation of concerns (one functionality needs multiple touch points)
 
     - currently: using modules for os configuration
-    - pending: apply same stratety for home-manager
+    - pending: apply same strategy for home-manager
     - past: everything in one file
 
 10. Keyboard centric
-
-** Contradictions
-   :PROPERTIES:
-   :CUSTOM_ID: contradictions
-   :END:
-
-1. Emacs vs Vi regarding requirement of minimal attack surface (less apps,
-   simpler apps)
-
-2. Monorepo for conf and blog will be a simpler configuration
