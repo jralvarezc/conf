@@ -16,8 +16,8 @@
       "conf"
       "data"
       "git"
-      ".ssh"
-      ".gnupg"
+      ".ssh"   # TODO: migrate to op
+      ".gnupg" # TODO: migrate to op
 #      ".thunderbird"
       ".config/op"
       ".config/fontconfig"
@@ -28,7 +28,13 @@
       ".config/kitty"
       ".config/dunst"
     ];
-    files = [
+  };
+
+  environment.persistence."/nix/persist".users.ralvarez = {
+    directories = [
+      ".cache/nix"
+      ".cache/nix-index"
+      ".cache/restic"
     ];
   };
 
