@@ -12,6 +12,7 @@ mkShell {
     manix
     nix-tree
     tokei
+    doas
   ];
 
   shellHook = ''
