@@ -17,8 +17,9 @@
     sync = ''
       op run --env-file="/home/ralvarez/.config/rclone/env" -- \
       rclone sync \
-             -P \
-             -l \
+             --log-file=$TTY \
+             --log-level=INFO \
+             --links \
              /nix/backup/home/ralvarez/ \
              b2:jralvarezc/rclone
     '';
