@@ -9,7 +9,6 @@ in
     ./features/persist.nix
   ];
 
-  # nixos configuration for user
   users.extraUsers."${login}" = {
     createHome = true;
     extraGroups = [
@@ -28,10 +27,7 @@ in
   };
 
   nix.settings.trusted-users = [ login ];
-
   services.gnome.gnome-keyring.enable = true;
-  
-  # home-manager configuration for user
   home-manager.users."${login}" = import ./home.nix;
 
 }

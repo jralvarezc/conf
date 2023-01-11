@@ -1,5 +1,4 @@
 { config, lib, pkgs, ... }:
-
 {
 
   home.stateVersion = "18.09";
@@ -13,6 +12,7 @@
     ../features/kitty
     ../features/chromium.nix
     ../features/i3
+    ../features/xdg.nix
 
     ## TODO: refactor
     ../features/gpg
@@ -30,17 +30,8 @@
     PAGER = "less -R";
   };
 
-  xdg.configFile."user-dirs.dirs".text = ''
-    XDG_DESKTOP_DIR="$HOME/.xdg/desktop"
-    XDG_DOWNLOAD_DIR="$HOME/.xdg/downloads"
-    XDG_DOCUMENTS_DIR="$HOME/.xdg/documents"
-    XDG_MUSIC_DIR="$HOME/.xdg/music"
-    XDG_PICTURES_DIR="$HOME/.xdg/pictures"
-    XDG_VIDEOS_DIR="$HOME/.xdg/videos"
-    XDG_TEMPLATES_DIR="$HOME/.xdg/templates"
-    XDG_PUBLICSHARE_DIR="$HOME/.xdg/share"
-  '';
-
+  programs.command-not-found.enable = false;
+  programs.fzf.enableZshIntegration = true;
   systemd.user.startServices = true;
 
 }

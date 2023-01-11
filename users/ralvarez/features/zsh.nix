@@ -19,7 +19,6 @@
     };
 
     initExtra = ''
-#      eval $(op signin)
       bindkey '^R' history-incremental-search-backward
       source ${pkgs.nix-index}/etc/profile.d/command-not-found.sh
       eval "$(zoxide init zsh)"
@@ -41,17 +40,9 @@
     oh-my-zsh = {
       enable = true;
       theme = "agnoster";
-      plugins = [
-        "git"
-        "pip"
-        "fasd"
-      ];
+      plugins = [ "git" "pip" "fasd" ];
     };
 
   };
-
-  programs.command-not-found.enable = false;
-
-  programs.fzf.enableZshIntegration = true;
 
 }

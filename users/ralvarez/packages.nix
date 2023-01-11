@@ -109,7 +109,6 @@
     freemind
     vym
     xmind
-
   ];
 
 }
