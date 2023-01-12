@@ -42,6 +42,7 @@
       more = "bat";
       rg = "rg --color=always";
       jq = "jq -C";
+      nano = "kak";
     };
 
     oh-my-zsh = {

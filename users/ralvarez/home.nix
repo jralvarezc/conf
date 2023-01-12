@@ -23,6 +23,7 @@
     ./features/restic.nix
     ./features/rclone.nix
     ./features/zsh.nix
+    ./features/xrandr.nix
     ./features/git
 
   ];

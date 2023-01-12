@@ -2,7 +2,7 @@
 
 {
 
-  fileSystems."/home/ralvarez" = { 
+  fileSystems."/home/ralvarez" = {
     device = "tmpfs";
     fsType = "tmpfs";
     options = [ "defaults" "size=2G" "mode=700" ];
@@ -21,7 +21,6 @@
 #      ".thunderbird"
       ".config/op"
       ".config/fontconfig"
-      ".config/xrandr"
       ".config/chromium/Default"
       ".config/zsh"
       ".config/i3"
