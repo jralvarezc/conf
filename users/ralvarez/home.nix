@@ -13,6 +13,7 @@
     ../features/chromium.nix
     ../features/i3
     ../features/xdg.nix
+    ../features/kak
 
     ## TODO: refactor
     ../features/gpg
