@@ -3,9 +3,8 @@
   chrome open in laptop not in 10 desktop over de 38in
   increase size in kitty
   auto open terminal and op login in 9 terminal for backups
-  kak lost config
-  direnv config in /nix/persist
   mouse copy paste in kak
+  migrate "ssh-add ../.ssh/github" to op
 
 - impermanence on home / tmpfs DONE - root / PENDING
   https://github.com/search?q=extension%3Anix+tmpfs++home.persistence&type=Code
