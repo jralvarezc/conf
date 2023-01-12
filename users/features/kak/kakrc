@@ -1,15 +1,8 @@
 # theme
 colorscheme dracula-transparent
 
-#map global user y '<a-|>xclip -i -selection clipboard<ret>'
-map global user p '!xclip -o<ret>'
-
 # Disable clippy
 set global ui_options ncurses_assistant=dilbert
-
-#plug "lePerdu/kakboard" %{
-#    hook global WinCreate .* %{ kakboard-enable }
-#}
 
 # Highlight trailing whitespace
 add-highlighter global/ regex \h+$ 0:Error
@@ -19,4 +12,3 @@ add-highlighter global/ number-lines -hlcursor
 
 # Show whitespaces
 add-highlighter global/ show-whitespaces
-
