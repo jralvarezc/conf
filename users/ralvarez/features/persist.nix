@@ -35,6 +35,7 @@
       ".cache/nix"
       ".cache/nix-index"
       ".cache/restic"
+      ".local/share/direnv/allow"
     ];
   };
 
