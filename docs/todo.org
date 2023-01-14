@@ -1,8 +1,10 @@
 
 - basic needs
+  hibernate
   chrome open in laptop not in 10 desktop over de 38in
   auto open terminal and op login in 9 terminal for backups
   migrate "ssh-add ../.ssh/github" to op
+  move zsh funtions backup/sync/etc to home.file.XXX.executable .local/bin
 
 - impermanence on home / tmpfs DONE - root / PENDING
   https://github.com/search?q=extension%3Anix+tmpfs++home.persistence&type=Code

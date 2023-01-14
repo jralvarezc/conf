@@ -8,11 +8,10 @@ mkShell {
     git
     just
     nixpkgs-fmt
-    #nix-linter
     manix
     nix-tree
     tokei
-    doas
+    # doas must be installed at system level
   ];
 
   shellHook = ''
