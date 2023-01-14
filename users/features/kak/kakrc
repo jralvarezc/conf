@@ -12,3 +12,6 @@ add-highlighter global/ number-lines -hlcursor
 
 # Show whitespaces
 add-highlighter global/ show-whitespaces
+
+# Indent to 80 columns
+add-highlighter global/ wrap -word -indent -width 80
