@@ -29,6 +29,7 @@
     zoxide
     fasd
     tldr
+    mprocs
 
     # mail
     mailspring

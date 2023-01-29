@@ -10,8 +10,9 @@
     RCLONE_CONFIG_B2_KEY = "op://Personal/rclone/key"
   '';
 
-  home.file.".config/zsh/functions/sync".text = ''
-    function sync () {
+  home.file.".local/bin/syncr" = {
+    text = ''
+      #!/usr/bin/env bash
       op run --env-file="/home/ralvarez/.config/rclone/env" -- \
       rclone sync \
              --log-file=$TTY \
@@ -19,7 +20,8 @@
              --links \
              /nix/backup/home/ralvarez/ \
              b2:jralvarezc/rclone $@
-    }
-  '';
+    '';
+    executable = true;
+  };
 
 }

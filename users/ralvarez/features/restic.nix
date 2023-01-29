@@ -11,18 +11,21 @@
     RESTIC_PASSWORD = "op://Personal/restic/password"
   '';
 
-  home.file.".config/zsh/functions/backup".text = ''
-    function backup () {
+  home.file.".local/bin/backup" = {
+    text = ''
+      #!/usr/bin/env bash
       op run --env-file="/home/ralvarez/.config/restic/env" -- \
       restic backup \
              /home/ralvarez \
              --exclude=.cache \
              --verbose $@
-    }
-  '';
+    '';
+    executable = true;
+  };
 
-  home.file.".config/zsh/functions/prune".text = ''
-    function prune () {
+  home.file.".local/bin/forget" = {
+    text = ''
+      #!/usr/bin/env bash
       op run --env-file="/home/ralvarez/.config/restic/env" -- \
       restic forget \
              --prune \
@@ -32,7 +35,8 @@
              --keep-weekly 12 \
              --keep-monthly 36 \
              --keep-yearly 15 $@
-    }
-  '';
+    '';
+    executable = true;
+  };
 
 }
