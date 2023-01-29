@@ -6,9 +6,6 @@
     # transfer
     wget
 
-    # debug
-    gdb
-
     # packages
     dpkg
     manix
